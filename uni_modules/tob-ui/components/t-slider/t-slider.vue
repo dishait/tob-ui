@@ -28,17 +28,17 @@ import { $P, $C, Emits, VModel } from '../../core'
  *
  * @property {Number} min 最小值，默认为0
  * @property {Number} max 最大值，默认为100
- * @property {Boolean} disabled 禁用，默认为false
+ * @property {Boolean} disabled = [true|false] 禁用，默认为false
  * @property {Number} step 步长，取值必须大于 0，并且可被(max - min)整除，默认为1
  *
- * @property {Boolean} showValue 是否显示当前 value
  * @property {String} blockColor 滑块颜色，用于自定义颜色
+ * @property {Boolean} showValue  = [true|false]  是否显示当前 value
  * @property {String} backgroundColor 滑块右侧背景条的颜色，用于自定义颜色
  * @property {String} activeColor 滑块左侧已选择部分的线条颜色，用于自定义颜色
  *
  * @property {Number} blockSize = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28] 滑块的大小，取值范围为 12 - 28，默认为20
  *
- * @property {String} color = [primary|secondary|accent|neutral|base|info|success|warning|error] 颜色，默认为base
+ * @property {String} color = [primary|secondary|accent|neutral|base|info|success|warning|error] 颜色，默认为 base
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -52,8 +52,8 @@ import { $P, $C, Emits, VModel } from '../../core'
  * 	@value error 错误
  *
  * @event {Function} click 点击事件
- * @event {Function} change 拖动后变更事件
  * @event {Function} changing 拖动事件
+ * @event {Function} change 拖动后变更事件
  */
 export default {
 	name: 't-slider',

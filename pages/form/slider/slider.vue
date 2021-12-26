@@ -28,11 +28,10 @@ export default {
 	data() {
 		return {
 			colors,
-			color: 0
+			color: 0,
+			value: 0
 		}
-	},
-	methods: {}
+	}
 }
 </script>
 
-<style></style>
