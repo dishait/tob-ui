@@ -9,9 +9,11 @@
 			:value="VModelValue"
 			:auto-blur="autoBlur"
 			:disabled="disabled"
-			:maxlength="maxLength"
+			:maxlength="maxlength"
 			:auto-height="autoHeight"
 			:placeholder="placeholder"
+			:confirm-type="confirmType"
+			:confirm-hold="confirmHold"
 			:selection-end="selectionEnd"
 			:hold-keyboard="holdKeyboard"
 			:cursor-spacing="cursorSpacing"
@@ -19,7 +21,6 @@
 			:adjust-position="adjustPosition"
 			:show-confirm-bar="showConfirmBar"
 			:placeholder-style="placeholderStyle"
-			:placeholder-class="placeholderClass"
 			:disable-default-padding="disableDefaultPadding"
 			@blur="blur"
 			@input="change"
@@ -47,11 +48,9 @@ import { $P, $M, $C, Color, createColorPresets, Emits, VModel, Size, Rounded } f
  *
  * @property {String} placeholderStyle 指定 placeholder 的样式
  *
- * @property {String} placeholderClass 指定 placeholder 的样式类，注意页面或组件的style中写了scoped时，需要在类名前写/deep/，默认为textarea-placeholder。字节跳动小程序、飞书小程序、快手小程序不支持
- *
  * @property {Boolean} disabled = [true|false]  是否禁用，默认为false
  *
- * @property {Number} maxLength = [140|...] 获取焦点，在 H5 平台能否聚焦以及软键盘是否跟随弹出，取决于当前浏览器本身的实现。默认为-1。
+ * @property {Number} maxlength = [140|...] 最大输入长度，设置为 -1 的时候不限制最大长度默认为-1。
  *
  * @property {Boolean} autoHeight = [true|false] 是否自动增高，设置auto-height时，style.height不生效。默认为false
  *
@@ -77,8 +76,7 @@ import { $P, $M, $C, Color, createColorPresets, Emits, VModel, Size, Rounded } f
  *
  * @property {Boolean} autoBlur = [true|false] 	键盘收起时，是否自动失去焦点，默认为false，App-vue 3.0.0+ ，App-nvue不支持
  *
- * @property {Boolean} confirmHold = [false|true] 点击键盘右下角按钮时是否保持键盘不收起。
- *
+ * @property {Boolean} confirmHold = [false|true] 点击键盘右下角按钮时是否保持键盘不收起，默认为false
  *
  * @property {Boolean} focus = [true|false] 聚焦
  *
@@ -153,7 +151,7 @@ export default {
 		cursor: 0,
 		focus: false,
 		fixed: false,
-		maxLength: -1,
+		maxlength: -1,
 		autoBlur: false,
 		disabled: false,
 		placeholder: '',
@@ -161,13 +159,13 @@ export default {
 		selectionEnd: -1,
 		autoHeight: false,
 		selectionStart: -1,
+		confirmHold: false,
 		confirmType: 'done',
 		holdKeyboard: false,
 		showConfirmBar: true,
 		adjustPosition: true,
 		placeholderStyle: '',
 		disableDefaultPadding: false,
-		placeholderClass: 'textarea-placeholder'
 	}),
 	data() {
 		return {
@@ -195,9 +193,9 @@ export default {
 	methods: $M({
 		toggle: true,
 		// 重置
-		reset() {
+		reset(e) {
 			this.updateVModelValue('')
-			this.$emit('reset')
+			this.$emit('reset', e)
 		},
 		// 输入事件
 		change(e) {

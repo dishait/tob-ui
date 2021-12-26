@@ -13,8 +13,8 @@ import { $P, $C, $M, Color, Size, Rounded, InjectEffects, createColorPresets } f
  * @description 单选框组件
  * @tutorial TODO 文档
  *
- * @property {String} value 标识，会被radio-group记录
  * @property {Boolean} disabled = [true|false] 禁用
+ * @property {String} value 标识，会被 t-radio-group 记录
  * 
  * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为full
  *
