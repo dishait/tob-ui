@@ -63,7 +63,7 @@
 		
 		<example title="只允许整数">
 			<view class="ml-6">
-				<t-stepper integer v-model="disabled" />
+				<t-stepper integer v-model="integer" />
 			</view>
 		</example>
 		
@@ -79,7 +79,6 @@
 				<t-stepper :step="5" v-model="step" />
 			</view>
 		</example>
-		
 	</view>
 </template>
 

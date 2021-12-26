@@ -9,7 +9,7 @@
 			class="stepper-input"
 			:class="[Disabled, Color, Rounded, Shadow, Size]"
 			
-			@blur="bulr"
+			@blur="blur"
 			@input="change"
 			@confirm="confirm"
 		/>
@@ -28,10 +28,10 @@ import { FieldTrack } from "../t-field/mixin"
  *
  * @property {Number} step 步长，默认为1
  * @property {Boolean} integer 只允许整数
- * @property {String} inputWidth 输入框宽度
  * @property {Number} max 最大值，默认为10000
  * @property {Number} min 最小值，默认为-10000
  * @property {Boolean} disabled 禁用，默认为false
+ * @property {String} inputWidth 输入框宽度，默认为50rpx
  * 
  * @property {Boolean} light = [true|false] 高亮，默认为false
  * @property {Boolean} outline = [true|false] 轮廓，默认为false
@@ -77,7 +77,7 @@ import { FieldTrack } from "../t-field/mixin"
  *  @value md 中
  * 	@value lg 大
  * 
- * @event {Function} bulr 失焦事件
+ * @event {Function} blur 失焦事件
  * @event {Function} click 点击事件
  * @event {Function} change 变更事件
  * @event {Function} confirm 确认事件
@@ -101,7 +101,7 @@ export default {
 		})
 	],
 	emits: [
-		'bulr', // 失焦事件
+		'blur', // 失焦事件
 		'change', // 变更事件
 		'confirm', // 确认事件
 	],
@@ -162,7 +162,7 @@ export default {
 			this.$emit('confirm', v)
 		},
 		// 失焦事件
-		bulr(e) {
+		blur(e) {
 			let v = e.detail.value
 
 			v = this.format(v)
@@ -172,7 +172,7 @@ export default {
 			})
 			
 			this.FieldTrack({ value: v, trigger: 'onBlur' })
-			this.$emit('bulr', e)
+			this.$emit('blur', e)
 		},
 		// 格式化
 		format(v) {
