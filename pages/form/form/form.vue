@@ -4,27 +4,35 @@
 
 		<example title="失焦校验" customClass="mt-8">
 			<t-form ref="blurForm">
-				<t-field name="username" required label="账号" labelIcon="deleteuser"><t-input v-model="blurInput" primordial placeholder="请输入账号" /></t-field>
+				<t-field name="username" required label="账号" labelIcon="deleteuser">
+					<t-input v-model="blurInput" primordial placeholder="请输入账号" />
+				</t-field>
 
-				<t-field name="password" required label="密码" labelIcon="lock"><t-input v-model="blurPassword" primordial type="password" placeholder="请输入密码" /></t-field>
+				<t-field name="password" required label="密码" labelIcon="lock">
+					<t-input v-model="blurPassword" primordial type="password" placeholder="请输入密码" />
+				</t-field>
 			</t-form>
 		</example>
 
 		<example title="变更时校验">
 			<t-form ref="changeForm" validateTrigger="onChange">
-				<t-field name="username" required label="账号" labelIcon="deleteuser"><t-input v-model="changeInput" primordial placeholder="请输入账号" /></t-field>
+				<t-field name="username" required label="账号" labelIcon="deleteuser">
+					<t-input v-model="changeInput" primordial placeholder="请输入账号" />
+				</t-field>
 
-				<t-field name="password" required label="密码" labelIcon="lock"><t-input v-model="changePassword" primordial type="password" placeholder="请输入密码" /></t-field>
+				<t-field name="password" required label="密码" labelIcon="lock">
+					<t-input v-model="changePassword" primordial type="password" placeholder="请输入密码" />
+				</t-field>
 			</t-form>
 		</example>
 
 		<example title="手动校验">
 			<t-form ref="form" validateTrigger="manual">
 				<t-field required name="username" label="用户名" labelIcon="deleteuser">
-				<t-input color="accent" v-model="username" placeholder="请输入用户名" />
+					<t-input color="accent" v-model="username" placeholder="请输入用户名" />
 				</t-field>
 
-				<t-field name="switch" label="开关" labelIcon="pic-left">					
+				<t-field name="switch" label="开关" labelIcon="pic-left">
 					<t-switch v-model="switchStatus" color="accent" />
 				</t-field>
 
@@ -54,8 +62,8 @@
 					<t-textarea color="accent" size="w-48 h-20" v-model="area" />
 				</t-field>
 			</t-form>
-			
-			<view class="text-center mt-8">
+
+			<view class="mt-8 text-center">
 				<t-btn color="accent" size="w-45" @click="sumbit">sumbit</t-btn>
 			</view>
 		</example>
@@ -108,8 +116,8 @@ export default {
 		}
 		this.$refs.blurForm.setRules(baseRules)
 		this.$refs.changeForm.setRules(baseRules)
-		
-		
+
+
 		const manualRules = {
 			username: [
 				field => {
@@ -136,7 +144,7 @@ export default {
 				}
 			]
 		}
-		
+
 		this.$refs.form.setRules(manualRules)
 	}
 }

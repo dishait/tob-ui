@@ -1,5 +1,11 @@
 <template>
-	<view class="t-card" :class="[Shadow, Color, Rounded, Size, Align, Justify, Direction]" @click="click"><slot /></view>
+	<view
+		class="t-card"
+		:class="[Shadow, Color, Rounded, Size, Align, Justify, Direction]"
+		@click="click"
+	>
+		<slot />
+	</view>
 </template>
 
 <script>
@@ -10,10 +16,10 @@ import { $C, $P, Size, Flex, Color, Emits, Shadow, Rounded } from '../../core'
  * @description 卡片组件
  * @tutorial TODO 文档
  * 
- * @property {Boolean} light = [true|false] 高亮，默认为false
- * @property {Boolean} outline = [true|false] 轮廓，默认为false
+ * @property {Boolean} light = [true|false] 高亮，默认为 false
+ * @property {Boolean} outline = [true|false] 轮廓，默认为 false
  * 
- * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为sm
+ * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为 sm
  *
  * 	@value none 无
  * 	@value sm 小
@@ -22,7 +28,7 @@ import { $C, $P, Size, Flex, Color, Emits, Shadow, Rounded } from '../../core'
  * 	@value lg 大
  * 	@value xl 超大
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为base
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 base
  *
  * 	@value none 无
  * 	@value sm 小
@@ -47,7 +53,7 @@ import { $C, $P, Size, Flex, Color, Emits, Shadow, Rounded } from '../../core'
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -62,7 +68,7 @@ import { $C, $P, Size, Flex, Color, Emits, Shadow, Rounded } from '../../core'
  * 	@value baseline 文字基线对齐
  * 	@value stretch 填充整个容器高度
  *
- * @property {String} justify = [start|end|around|center|between|evenly] 主轴对齐方式，默认为 start 头部
+ * @property {String} justify = [start|end|around|center|between|evenly] 主轴对齐方式，默认为 start
  *
  *  @value start 头部
  * 	@value end 尾部
@@ -83,10 +89,10 @@ import { $C, $P, Size, Flex, Color, Emits, Shadow, Rounded } from '../../core'
 export default {
 	name: 't-card',
 	mixins: [
-		Flex({ direction: 'col' }),
+		Color(),
 		Emits(['click']),
-		Color({ color: '' }),
 		Shadow({ shadow: 'sm' }),
+		Flex({ direction: 'col' }),
 		Rounded({ rounded: 'base' }),
 		Size({
 			presets: {
@@ -101,7 +107,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-card {
 	.flex;
 	overflow: hidden;

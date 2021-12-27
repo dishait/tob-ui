@@ -1,15 +1,38 @@
 <template>
-	<view class="notice-bar-container" :class="[Shadow, Color, Rounded]" @click="click" :style="Visible">
+	<view
+		class="notice-bar-container"
+		:class="[Shadow, Color, Rounded]"
+		@click="click"
+		:style="Visible"
+	>
 		<view class="t-notice-bar" :class="[Size]" :id="nanoid">
-			<t-icon :type="leftIcon" class="notice-bar-left-icon" v-if="leftIcon" size="1.2em" @click="leftIconClick" />
+			<t-icon
+				:type="leftIcon"
+				class="notice-bar-left-icon"
+				v-if="leftIcon"
+				size="1.2em"
+				@click="leftIconClick"
+			/>
 			<view class="notice-bar-content">
-				<view class="notice-bar-item" :class="[Scrollable]" :style="[Delay, Duration]"><slot /></view>
+				<view class="notice-bar-item" :class="[Scrollable]" :style="[Delay, Duration]">
+					<slot />
+				</view>
 			</view>
 
 			<view class="notice-bar-action">
 				<slot name="action" />
-				<t-icon :type="closeIcon" class="notice-bar-close-icon" v-if="closeable" @click="closeIconClick" />
-				<t-icon :type="rightIcon" class="notice-bar-right-icon" v-if="rightIcon" @click="rightIconClick" />
+				<t-icon
+					:type="closeIcon"
+					class="notice-bar-close-icon"
+					v-if="closeable"
+					@click="closeIconClick"
+				/>
+				<t-icon
+					:type="rightIcon"
+					class="notice-bar-right-icon"
+					v-if="rightIcon"
+					@click="rightIconClick"
+				/>
 			</view>
 		</view>
 	</view>
@@ -24,15 +47,15 @@ import { $P, $C, $T, Emits, Color, Rounded, Size, Shadow } from '../../core/inde
  * @tutorial TODO 文档
  *
  *
- * @property {Boolean} light = [true|false] 亮色，默认为true
- * @property {Boolean} outline = [true|false] 轮廓，默认为false
- * @property {Boolean} closeable = [true|false] 可关闭，默认为false
- * @property {Boolean} scrollable = [true|false] 可滚动，默认为true
+ * @property {Boolean} light = [true|false] 亮色，默认为 true
+ * @property {Boolean} outline = [true|false] 轮廓，默认为 false
+ * @property {Boolean} closeable = [true|false] 可关闭，默认为 false
+ * @property {Boolean} scrollable = [true|false] 可滚动，默认为 true
  *
- * @property {String} delay = [1s|0.5s|0.2s|...] 动画延迟，支持单位有s，ms，默认为空
- * @property {String} duration = [8s|6s|4s|3s|...] 动画时长，支持单位有s，ms，默认为8s
+ * @property {String} delay = [1s|0.5s|0.2s|....] 动画延迟，支持单位有 s，ms，默认为空
+ * @property {String} duration = [8s|6s|4s|3s|....] 动画时长，支持单位有 s，ms，默认为 8s
  *
- * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error|...] 成功颜色，默认无颜色
+ * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error|...] 颜色，默认为 success
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -44,61 +67,61 @@ import { $P, $C, $T, Emits, Color, Rounded, Size, Shadow } from '../../core/inde
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为full，圆
- *
- * 	@value none 无
- * 	@value sm 小
- * 	@value base 基础
- * 	@value md 中
- * 	@value lg 大
- * 	@value xl 超大
- * 	@value 2xl 超级大
- * 	@value 3xl 非常大
- * 	@value full 圆
- *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
- *
- * 	@value xs 超小
- * 	@value sm 小
- *  @value md 中
- * 	@value lg 大
- *
- * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为none
- *
- * 	@value none 无
- * 	@value sm 小
- * 	@value base 基础
- * 	@value md 中
- * 	@value lg 大
- * 	@value xl 超大
- *
- * @property {String} leftIcon = [fire|bell|alert|notification|bulb|info-circle|folder|error|stop|...] 左侧图标，默认为sound
- *
- * 	@value fire 热门
- * 	@value bell 消息
- * 	@value alert 注意
- * 	@value notification 通知
- * 	@value bulb 提醒
- * 	@value info-circle 提示
- * 	@value folder 文件夹
- * 	@value error 出错
- * 	@value stop 禁止
- * 	@value sound 喇叭
- *
- * @property {String} rightIcon = [right|...] 右侧图标，默认为空
- *
- * 	@value right 右箭头
- *
- * @property {String} closeIcon = [close-circle|close|right|...] 关闭图标，默认当closeable为true时，走close-circle
- *
- * 	@value close 关闭
- * 	@value right 右箭头
- * 	@value close-circle 关闭(圆形)
- *
- * @event {Function} click 点击事件
- * @event {Function} leftIconClick 左侧图标点击事件
- * @event {Function} rightIconClick 右侧图标点击事件
- * @event {Function} closeIconClick 关闭图标点击事件
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 full
+  * 
+ * 	@value none 无 
+ * 	@value sm 小 
+ * 	@value base 基础 
+ * 	@value md 中 
+ * 	@value lg 大 
+ * 	@value xl 超大 
+ * 	@value 2xl 超级大 
+ * 	@value 3xl 非常大 
+ * 	@value full 圆 
+ * 
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md 
+ * 
+ * 	@value xs 超小 
+ * 	@value sm 小 
+ *  @value md 中 
+ * 	@value lg 大 
+ * 
+ * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为 none 
+ * 
+ * 	@value none 无 
+ * 	@value sm 小 
+ * 	@value base 基础 
+ * 	@value md 中 
+ * 	@value lg 大 
+ * 	@value xl 超大 
+ * 
+ * @property {String} leftIcon = [fire|bell|alert|notification|bulb|info-circle|folder|error|stop|....] 左侧图标，默认为 sound 
+ * 
+ * 	@value fire 热门 
+ * 	@value bell 消息 
+ * 	@value alert 注意 
+ * 	@value notification 通知 
+ * 	@value bulb 提醒 
+ * 	@value info-circle 提示 
+ * 	@value folder 文件夹 
+ * 	@value error 出错 
+ * 	@value stop 禁止 
+ * 	@value sound 喇叭 
+ * 
+ * @property {String} rightIcon = [right|....] 右侧图标，默认为空 
+ * 
+ * 	@value right 右箭头 
+ * 
+ * @property {String} closeIcon = [close-circle|close|right|....] 关闭图标，默认当 closeable 为 true 时，走 close-circle 
+ * 
+ * 	@value close 关闭 
+ * 	@value right 右箭头 
+ * 	@value close-circle 关闭(圆形) 
+ * 
+ * @event {Function} click 点击事件 
+ * @event {Function} leftIconClick 左侧图标点击事件 
+ * @event {Function} rightIconClick 右侧图标点击事件 
+ * @event {Function} closeIconClick 关闭图标点击事件 
  */
 export default {
 	name: 't-notice-bar',
@@ -187,7 +210,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-notice-bar {
 	.flex;
 	.items-center;
@@ -228,7 +251,7 @@ export default {
 			animation: 8s linear infinite loop;
 		}
 	}
-	
+
 	&-action {
 		.flex;
 		.items-center;

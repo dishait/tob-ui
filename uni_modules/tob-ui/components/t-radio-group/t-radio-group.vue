@@ -1,5 +1,7 @@
 <template>
-	<view @click="click"><slot /></view>
+	<view @click="click">
+		<slot />
+	</view>
 </template>
 
 <script>
@@ -17,9 +19,9 @@ import { VModel, Emits, ProvideEffects } from "../../core"
 export default {
 	name: 't-radio-group',
 	mixins: [
-		Emits(['click']), 
+		Emits(['click']),
 		FieldTrack('radio'),
-		VModel({ value: '' }), 
+		VModel({ value: '' }),
 		ProvideEffects('RadioGroup')
 	],
 	emits: ['change'],

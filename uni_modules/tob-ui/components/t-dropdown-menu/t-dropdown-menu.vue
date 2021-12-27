@@ -2,13 +2,22 @@
 	<view class="t-dropdown-menu" @click="click" :style="[Style]">
 		<view class="dropdown-menu-mask" :class="[MaskVisible]" @click="maskClick" />
 		<view class="dropdown-menu-row" :class="[Disabled, Shadow]">
-			<view :key="k" v-for="(v, k) of VModelValue" class="dropdown-menu-row-item" @click="optionsRowClick(k, v)" :class="[active === k && OptionsRowActive]">
-				{{ options[k][v] }}
-			</view>
+			<view
+				:key="k"
+				v-for="(v, k) of VModelValue"
+				class="dropdown-menu-row-item"
+				@click="optionsRowClick(k, v)"
+				:class="[active === k && OptionsRowActive]"
+			>{{ options[k][v] }}</view>
 		</view>
 
 		<view class="dropdown-menu" :class="[Rounded]" :style="dropdownMenuDynamicHeight">
-			<view class="dropdown-menu-item" v-for="(v, i) of options[active]" @click.stop="menuItemClick(active, i)" :key="i">
+			<view
+				class="dropdown-menu-item"
+				v-for="(v, i) of options[active]"
+				@click.stop="menuItemClick(active, i)"
+				:key="i"
+			>
 				<slot :text="v" :index="i" :type="active" :isActive="i === VModelValue[active]">
 					<view class="dropdown-menu-item-container" :class="i === VModelValue[active] && ActiveColor">
 						<text>{{ v }}</text>
@@ -30,10 +39,10 @@ import { $P, $C, Emits, VModel, textColorPresets, Shadow, Rounded } from '../../
  * @property {Object} options 选项
  * @property {Object} menuItemHeights 子项目高度
  * @property {Boolean} disabled = [true|false] 禁用
- * @property {Number} zIndex = [98|99|100|101|...] 层级，默认为100
+ * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为100
  * @property {Boolean} closeOnSelected = [true|false] 选中后关闭，默认开启
  * @property {Boolean} closeOnClickMask = [true|false] 点击蒙版关闭，默认开启
- * @property {String} activeColor = [primary|secondary|accent|neutral|info|success|warning|error|...] 选中颜色，只有文本颜色，默认为error红色
+ * @property {String} activeColor = [primary|secondary|accent|neutral|info|success|warning|error|...] 选中颜色，只有文本颜色，默认为 error 红色
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -45,7 +54,7 @@ import { $P, $C, Emits, VModel, textColorPresets, Shadow, Rounded } from '../../
  * 	@value warning 警告
  * 	@value error 错误
  * 
- * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为sm
+ * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为 sm
  *
  * 	@value none 无
  * 	@value sm 小
@@ -53,7 +62,19 @@ import { $P, $C, Emits, VModel, textColorPresets, Shadow, Rounded } from '../../
  * 	@value md 中
  * 	@value lg 大
  * 	@value xl 超大
+ * 
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 base
  *
+ * 	@value none 无
+ * 	@value sm 小
+ * 	@value base 基础
+ * 	@value md 中
+ * 	@value lg 大
+ * 	@value xl 超大
+ * 	@value 2xl 超级大
+ * 	@value 3xl 无敌大
+ * 	@value full 圆
+ * 
  * @event {Function} click 点击事件
  * @event {Function} change 变更事件
  * @event {Function} maskClick 蒙版点击事件
@@ -63,9 +84,9 @@ import { $P, $C, Emits, VModel, textColorPresets, Shadow, Rounded } from '../../
 export default {
 	name: 't-dropdown-menu',
 	mixins: [
-		Emits(['click']), 
-		VModel({ value: {} }), 
-		Shadow({ shadow: 'sm' }), 
+		Emits(['click']),
+		VModel({ value: {} }),
+		Shadow({ shadow: 'sm' }),
 		Rounded({ rounded: 'base' }),
 	],
 	emits: [
@@ -174,8 +195,8 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
-@import (reference, less) '../../core/tool.less';
+@import (reference, less) "../../index.less";
+@import (reference, less) "../../core/tool.less";
 .t-dropdown-menu {
 	.relative;
 }
@@ -225,7 +246,7 @@ export default {
 			&::after {
 				.ml-1;
 				.opacity-40;
-				content: '';
+				content: "";
 				transition: all 0.2s ease-in-out;
 				border-left: 5px solid transparent;
 				border-right: 5px solid transparent;

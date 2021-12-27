@@ -4,7 +4,7 @@
 			<t-icon type="fire" class="mr-1" />
 			<text>TOB UI</text>
 		</view>
-		
+
 		<view class="m-4 mt-6">
 			<text class="type">Base</text>
 			<view class="container">
@@ -17,7 +17,7 @@
 				</view>
 			</view>
 		</view>
-		
+
 		<view class="m-4 mt-20">
 			<text class="type">Form</text>
 			<view class="container">
@@ -69,8 +69,7 @@
 				</view>
 			</view>
 		</view>
-	
-		
+
 		<view class="m-4 mt-20">
 			<text class="type">Others</text>
 			<view class="container">
@@ -83,7 +82,7 @@
 				</view>
 			</view>
 		</view>
-		
+
 		<t-back-top />
 	</view>
 </template>
@@ -113,7 +112,7 @@ export default {
 </script>
 
 <style lang="less">
-@import (reference, less) '@/uni_modules/tob-ui/index.less';
+@import (reference, less) "@/uni_modules/tob-ui/index.less";
 .title {
 	.p-1;
 	.ml-1;

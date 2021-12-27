@@ -1,5 +1,7 @@
 <template>
-	<view class="t-row" :class="[Align, Justify]" :style="[Style]" @click="click"><slot /></view>
+	<view class="t-row" :class="[Align, Justify]" :style="[Style]" @click="click">
+		<slot />
+	</view>
 </template>
 
 <script>
@@ -9,9 +11,9 @@ import { $P, $C, Flex, Emits } from '../../core'
  * @description 布局行组件
  * @tutorial TODO 文档
  *
- * @property {String} mx = [0rpx|10rpx|20rpx|30rpx|...] 左右边距
- * @property {String} my = [0rpx|10rpx|20rpx|30rpx|...] 上下边距
- * @property {String} gutter = [0rpx|10rpx|20rpx|30rpx|...] 栅格间隔，默认为空
+ * @property {String} mx = [0rpx|10rpx|20rpx|30rpx|....] 左右边距
+ * @property {String} my = [0rpx|10rpx|20rpx|30rpx|....] 上下边距
+ * @property {String} gutter = [0rpx|10rpx|20rpx|30rpx|....] 栅格间隔，默认为空
  *
  * @property {String} align = [start|center|end|baseline|stretch] 交叉轴对齐方式，默认为 stretch 填充整个容器高度
  *
@@ -42,10 +44,10 @@ export default {
 	computed: $C({
 		Style() {
 			const { mx, my } = this
-			return { 
-				marginTop: my, 
-				marginLeft: mx, 
-				marginRight: mx, 
+			return {
+				marginTop: my,
+				marginLeft: mx,
+				marginRight: mx,
 				marginBottom: my
 			}
 		}
@@ -60,7 +62,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 .t-row {
 	.flex;

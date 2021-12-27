@@ -11,7 +11,7 @@ import { $P, $C } from "../../core"
  * @description 分割线组件
  * @tutorial TODO 文档
  * @property {String} text 文本
- * @property {Boolean} vertical = [false|true] 竖排，默认为false
+ * @property {Boolean} vertical = [false|true] 竖排，默认为 false
  *
  * @event {Function} click 点击事件
  */
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 .t-divider {
 	.h-1;
@@ -35,15 +35,15 @@ export default {
 	.flex;
 	.items-center;
 	color: #e9ecef;
-	
+
 	&::after,
-	&::before{
-		content: '';
+	&::before {
+		content: "";
 		flex-grow: 1;
 		height: 0.15rem;
 		background-color: #e9ecef;
 	}
-	
+
 	& > .text {
 		.p-1;
 	}
@@ -58,11 +58,11 @@ export default {
 	width: 1rem;
 	margin: 0 1rem;
 	align-self: stretch;
-	
+
 	&::after,
-	&::before{
+	&::before {
 		.flex-1;
-		content: '';
+		content: "";
 		width: 0.125rem;
 	}
 }

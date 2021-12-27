@@ -1,5 +1,7 @@
 <template>
-	<view class="t-pendant-item" :class="[Position]" @click="click"><slot /></view>
+	<view class="t-pendant-item" :class="[Position]" @click="click">
+		<slot />
+	</view>
 </template>
 
 <script>
@@ -48,7 +50,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 .t-pendant-item {
 	.absolute;

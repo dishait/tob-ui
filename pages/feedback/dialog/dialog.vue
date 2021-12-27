@@ -2,8 +2,8 @@
 	<view>
 		<t-nav-bar title="Dialog" sticky />
 
-		<view class="h-screen bg-base bg-opacity-10 pt-8">
-			<example title="基础" customClass="">
+		<view class="bg-base h-screen bg-opacity-10 pt-8">
+			<example title="基础" customClass=" ">
 				<t-cell-group inset="mx-3" rounded="lg">
 					<t-cell title="基础用法" value="😂" @click="open(base)" />
 

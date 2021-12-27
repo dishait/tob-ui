@@ -9,12 +9,14 @@
 		<example title="插槽">
 			<t-nav-bar>
 				<template #left>
-					<view class="text-accent bg-accent text-md bg-opacity-10 px-3 rounded"><t-icon type="home" size="1.2em" /></view>
+					<view class="bg-accent rounded bg-opacity-10 text-accent text-md px-3">
+						<t-icon type="home" size="1.2em" />
+					</view>
 				</template>
-			
-				<view class="text-lg border border-primary text-primary rounded px-3">标题</view>
+
+				<view class="border border-primary rounded text-lg text-primary px-3">标题</view>
 				<template #right>
-					<view class="text-error bg-error bg-opacity-10 px-3 rounded">99+</view>
+					<view class="bg-error rounded bg-opacity-10 text-error px-3">99+</view>
 				</template>
 			</t-nav-bar>
 		</example>

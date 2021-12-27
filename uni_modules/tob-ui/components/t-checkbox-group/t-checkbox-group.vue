@@ -1,10 +1,12 @@
 <template>
-	<view @click="click"><slot /></view>
+	<view @click="click">
+		<slot />
+	</view>
 </template>
 
 <script>
 import { FieldTrack } from "../t-field/mixin"
-import { $P, Emits, ProvideEffects, VModel } from "../../core"
+import { Emits, ProvideEffects, VModel } from "../../core"
 
 /**
  * CheckboxGroup 多选框组

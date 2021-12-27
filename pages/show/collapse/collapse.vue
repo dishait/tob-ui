@@ -23,17 +23,14 @@
 				<t-collapse-item name="1" rightIcon="arrowdown">
 					<template #title>
 						<view class="text-primary">
-							<t-icon type="fire" class="mr-1" />
-							标题
+							<t-icon type="fire" class="mr-1" />标题
 						</view>
 					</template>
 					少年易学老难成，一寸光阴不可轻
 				</t-collapse-item>
-					
-				<t-collapse-item title="禁用" name="3" disabled>
-					少年易学老难成，一寸光阴不可轻
-				</t-collapse-item>
-				
+
+				<t-collapse-item title="禁用" name="3" disabled>少年易学老难成，一寸光阴不可轻</t-collapse-item>
+
 				<t-collapse-item title="标题" name="2">
 					<template #right>
 						<t-tag type="error" light size="sm">99+</t-tag>

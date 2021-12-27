@@ -1,19 +1,19 @@
 <template>
 	<view class="pb-20">
 		<t-nav-bar title="Breadcrumbs" sticky />
-		
+
 		<example customClass="mt-8" title="颜色">
 			<view v-for="v of colors" class="mt-2 ml-5" :key="v.type">
 				<t-breadcrumbs :color="v.type" :list="list" />
 			</view>
 		</example>
-		
+
 		<example title="尺寸">
 			<view v-for="v of sizes" class="mt-2 ml-5" :key="v.type">
 				<t-breadcrumbs :size="v.type" :list="list" />
 			</view>
 		</example>
-		
+
 		<example title="图标">
 			<view class="mt-2 ml-5">
 				<t-breadcrumbs color="secondary" rightIcon="shopping" :list="shoppings" />
@@ -22,10 +22,10 @@
 				<t-breadcrumbs color="primary" leftIcon="folder" :list="floders" />
 			</view>
 		</example>
-		
+
 		<example title="跳转">
 			<view class="mt-2 ml-5">
-				<t-breadcrumbs color="base" :list="toList" @click="go"/>
+				<t-breadcrumbs color="base" :list="toList" @click="go" />
 			</view>
 		</example>
 	</view>
@@ -52,7 +52,7 @@ export default {
 				Cell: '/pages/base/cell/cell',
 				Btn: '/pages/base/button/button',
 			}
-			
+
 			uni.navigateTo({
 				url: routes[v]
 			})

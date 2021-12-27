@@ -1,5 +1,9 @@
 <template>
-	<view class="t-menu-item" :class="[BorderColor, Disabled, Active, Bordered, Horizontal]" @click="click">
+	<view
+		class="t-menu-item"
+		:class="[BorderColor, Disabled, Active, Bordered, Horizontal]"
+		@click="click"
+	>
 		<view class="menu-item-content">
 			<view class="menu-item-left">
 				<t-icon v-if="icon" size="1.1em" :type="icon" class="menu-item-icon" />
@@ -81,7 +85,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 /* #ifdef H5 */
 @media screen and (min-width: 680px) {
@@ -101,7 +105,7 @@ export default {
 	border-left-width: 0;
 	border-left-style: solid;
 	transition: all 0.15s linear;
-	
+
 	/* #ifdef H5 */
 	.cursor-pointer;
 	/* #endif */

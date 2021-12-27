@@ -10,7 +10,7 @@
 				<t-step>收货</t-step>
 			</t-steps>
 
-			<view class="mt-5 flex justify-center">
+			<view class="flex mt-5 justify-center">
 				<t-btn color="success" @click="next">Next</t-btn>
 				<t-btn color="base" light @click="reset" class="ml-6">Reset</t-btn>
 			</view>
@@ -44,7 +44,7 @@
 				</t-step>
 			</t-steps>
 
-			<view class="mt-5 flex justify-center">
+			<view class="flex mt-5 justify-center">
 				<t-btn color="success" @click="nextCustomSlot">Next</t-btn>
 				<t-btn color="base" light @click="resetCustomSlot" class="ml-6">Reset</t-btn>
 			</view>
@@ -54,9 +54,7 @@
 			<t-steps :current="color" successColor="accent">
 				<t-step>注册</t-step>
 				<t-step>
-					<template #sign>
-						👀
-					</template>
+					<template #sign>👀</template>
 					登录
 				</t-step>
 				<t-step>
@@ -68,31 +66,27 @@
 				<t-step>收货</t-step>
 			</t-steps>
 
-			<view class="mt-5 flex justify-center">
+			<view class="flex mt-5 justify-center">
 				<t-btn color="accent" @click="nextColor">Next</t-btn>
 				<t-btn color="base" light @click="resetColor" class="ml-6">Reset</t-btn>
 			</view>
 		</example>
-		
+
 		<example title="失败熔断">
 			<t-steps :current="customFail" :fail="fail">
 				<t-step>注册</t-step>
 				<t-step>
-					<template #sign>
-						🤓
-					</template>
+					<template #sign>🤓</template>
 					登录
 				</t-step>
 				<t-step>
-					<template #sign>
-						!
-					</template>
+					<template #sign>!</template>
 					购买
 				</t-step>
 				<t-step>收货</t-step>
 			</t-steps>
-		
-			<view class="mt-5 flex justify-center">
+
+			<view class="flex mt-5 justify-center">
 				<t-btn color="success" @click="nextFail">Next</t-btn>
 				<t-btn color="error" @click="toFail" class="ml-6">Fail</t-btn>
 				<t-btn color="base" light @click="resetFail" class="ml-6">Reset</t-btn>

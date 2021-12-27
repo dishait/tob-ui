@@ -1,7 +1,9 @@
 <template>
 	<view class="t-cell-group" @click="click">
 		<view v-if="title" class="cell-group-title">{{ title }}</view>
-		<view :class="[inset, Rounded]" class="cell-group-inset"><slot /></view>
+		<view :class="[inset, Rounded]" class="cell-group-inset">
+			<slot />
+		</view>
 	</view>
 </template>
 
@@ -14,7 +16,7 @@ import { $P, $C, Emits, Rounded } from '../../core/index.js'
  * @property {String} title 标题
  * @property {Boolean} inset = [mx-1|mx-2|mx-3|mx-4|mx-5|...] 插入
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为none
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 none
  *
  * 	@value none 无
  * 	@value sm 小
@@ -39,7 +41,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 .t-cell-group {
 	.mt-2;

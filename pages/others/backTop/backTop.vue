@@ -4,21 +4,13 @@
 
 		<t-back-top :color="Color" :icon="Icon" :rounded="Rounded" :light="light" />
 		<view class="text-neutral text-xl pt-5" style="height: 120vh;">
-			<view class="text-center text-white bg-accent">请往下拉</view>
+			<view class="bg-accent text-center text-white">请往下拉</view>
 
-			<view class="m-5 text-base flex flex-col">
-				<t-switch v-model="color" color="primary" class="my-2">
-					颜色
-				</t-switch>
-				<t-switch v-model="light" color="secondary" class="my-2">
-					高亮
-				</t-switch>
-				<t-switch v-model="rounded" color="accent" class="my-2">
-					圆角
-				</t-switch>
-				<t-switch v-model="icon" color="error" class="my-2">
-					自定义图标
-				</t-switch>
+			<view class="flex flex-col m-5 text-base">
+				<t-switch v-model="color" color="primary" class="my-2">颜色</t-switch>
+				<t-switch v-model="light" color="secondary" class="my-2">高亮</t-switch>
+				<t-switch v-model="rounded" color="accent" class="my-2">圆角</t-switch>
+				<t-switch v-model="icon" color="error" class="my-2">自定义图标</t-switch>
 			</view>
 		</view>
 	</view>
@@ -46,7 +38,7 @@ export default {
 		},
 		Icon() {
 			const { icon } = this
-			return icon ? 'arrowup' : 'caret-up' 
+			return icon ? 'arrowup' : 'caret-up'
 		}
 	}
 }

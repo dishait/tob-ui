@@ -3,7 +3,7 @@
 		<button
 			class="t-btn"
 			:lang="lang"
-			hover-class=""
+			hover-class
 			:loading="loading"
 			:disabled="disabled"
 			:open-type="openType"
@@ -21,7 +21,9 @@
 			@getphonenumber="getphonenumber"
 			:class="[Color, Rounded, Size, Disabled, Shadow, Ghost, Block]"
 		>
-			<view class="btn-content"><slot /></view>
+			<view class="btn-content">
+				<slot />
+			</view>
 		</button>
 	</view>
 </template>
@@ -33,12 +35,12 @@ import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
  * @description 按钮组件
  * @tutorial TODO 文档
  *
- * @property {Boolean} block = [true|false] 块级
- * @property {Boolean} disabled = [true|false] 禁用
- * @property {Boolean} loading = [true|false] 原生loading
+ * @property {Boolean} loading = [true|false] 原生 loading
  * @property {Boolean} ghost = [true|false] 幽灵，默认为false
  * @property {Boolean} light = [true|false] 高亮，默认为false
+ * @property {Boolean} block = [true|false] 块级，默认为 false
  * @property {Boolean} outline = [true|false] 轮廓，默认为false
+ * @property {Boolean} disabled = [true|false] 禁用，默认为 false
  *
  * @property {String} appParameter 打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效，默认为空
  *
@@ -72,7 +74,7 @@ import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
  * 	@value lifestyle 关注生活号(支付宝小程序)
  * 	@value openGroupProfile 呼起QQ群资料卡页面，可以通过group-id属性设定需要打开的群资料卡的群号，同时manifest中必须配置groupIdList(QQ小程序基础库1.4.7版本+)
  *
- * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为none
+ * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为 none
  *
  * 	@value none 无
  * 	@value sm 小
@@ -81,7 +83,7 @@ import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
  * 	@value lg 大
  * 	@value xl 超大
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为base
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 base
  *
  * 	@value none 无
  * 	@value sm 小
@@ -93,7 +95,7 @@ import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
  * 	@value 3xl 无敌大
  * 	@value full 圆
  *
- * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error|...] 颜色，默认为base
+ * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error|...] 颜色，默认为 base
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -106,7 +108,7 @@ import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -117,7 +119,7 @@ import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
  * @event {Function} error 当使用开放能力时，发生错误的回调(微信小程序)
  * @event {Function} launchapp 从小程序打开 App 成功的回调(微信小程序)
  * @event {Function} opensetting 在打开授权设置页并关闭后回调(微信小程序)
- * @event {Function} getuserinfo 用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同uni.getUserInfo(微信小程序)
+ * @event {Function} getuserinfo 用户点击该按钮时，会返回获取到的用户信息，从返回参数的detail中获取到的值同 uni.getUserInfo (微信小程序)
  * @event {Function} getphonenumber 获取用户手机号回调(微信小程序)
  */
 export default {
@@ -169,7 +171,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-btn {
 	.inline-flex;
 	.items-center;

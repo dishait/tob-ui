@@ -15,7 +15,7 @@ import { $P, $C, $M, Emits, Color, Size, Rounded, VModel, createColorPresets } f
  *
  * @property {Boolean} disabled = [true|false] 禁用
  *
- * @property {String} color = [primary|secondary|accent|neutral|base|info|success|warning|error] 颜色，默认为base
+ * @property {String} color = [primary|secondary|accent|neutral|base|info|success|warning|error] 颜色，默认为 base
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -28,14 +28,14 @@ import { $P, $C, $M, Emits, Color, Size, Rounded, VModel, createColorPresets } f
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
  *  @value md 中
  * 	@value lg 大
  * 
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为full
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 full
  *
  * 	@value none 无
  * 	@value sm 小
@@ -77,7 +77,7 @@ export default {
 		Checked() {
 			const { VModelValue } = this
 			return VModelValue && 'switch-checked'
-		} 
+		}
 	}),
 	watch: {
 		VModelValue(v) {
@@ -97,7 +97,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 // label容器
 .t-switch-label {
@@ -121,7 +121,8 @@ export default {
 	border: 1.5px solid;
 	transition: 0.25s ease-in-out;
 	transition-property: box-shadow, opacity;
-	box-shadow: calc(var(--offset) * -1) 0 0 2px #ffffff inset, 0 0 0 2px #ffffff inset;
+	box-shadow: calc(var(--offset) * -1) 0 0 2px #ffffff inset,
+		0 0 0 2px #ffffff inset;
 }
 
 // 选中样式
@@ -195,7 +196,7 @@ export default {
 		height: 1.25rem;
 		width: 2rem;
 	}
-	
+
 	// 小
 	&-sm {
 		--offset: 1rem;

@@ -3,7 +3,7 @@
 		<t-nav-bar title="Notify" sticky />
 
 		<view class="bg-base bg-opacity-10 pt-8 pb-10">
-			<example title="基础" customClass="">
+			<example title="基础" customClass=" ">
 				<t-cell-group inset="mx-3" rounded="lg">
 					<t-cell title="基础用法" value="😂" @click="open({ content: '基础用法' })" />
 					<t-cell title="手动关闭" value="😊" @click="toggleOpen" />
@@ -13,7 +13,13 @@
 
 			<example title="颜色">
 				<t-cell-group inset="mx-3" rounded="lg">
-					<t-cell v-for="v in colors" :key="v.type" :title="v.desc" value="🤔" @click="open({ content: v.desc, color: v.type })" />
+					<t-cell
+						v-for="v in colors"
+						:key="v.type"
+						:title="v.desc"
+						value="🤔"
+						@click="open({ content: v.desc, color: v.type })"
+					/>
 				</t-cell-group>
 			</example>
 		</view>
@@ -45,4 +51,3 @@ export default {
 }
 </script>
 
-<style></style>

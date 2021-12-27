@@ -1,5 +1,10 @@
 <template>
-	<view class="t-tag" :class="[Color, Rounded, Shadow, Size, Visible]" @click="click" v-if="visibleTemp">
+	<view
+		class="t-tag"
+		:class="[Color, Rounded, Shadow, Size, Visible]"
+		@click="click"
+		v-if="visibleTemp"
+	>
 		<t-icon v-if="leftIcon" :type="leftIcon" class="tag-left-icon" />
 		<slot />
 		<t-icon v-if="rightIcon" :type="rightIcon" class="tag-right-icon" />
@@ -15,17 +20,15 @@ import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
  * Tag 标签
  * @description 标签组件
  * @tutorial TODO 文档
- *
+ * @property {String} leftIcon 左侧图标
+ * @property {String} rightIcon 右侧图标
  * @property {Boolean} light = [true|false] 高亮，默认为false
  * @property {Boolean} outline = [true|false] 轮廓，默认为false
  * @property {Boolean} closeable = [true|false] 可关闭，默认为false
  * 
- * @property {String} leftIcon 左图标
- * @property {String} rightIcon 右图标
- * 
- * @property {String} closeIcon = [close-circle|close|...] 关闭图标，默认为close-circle
+ * @property {String} closeIcon = [close-circle|close|....] 关闭图标，默认为 close-circle
  *
- * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为none
+ * @property {String} shadow = [none|sm|base|md|lg|xl|....] 阴影，默认为 none
  *
  * 	@value none 无
  * 	@value sm 小
@@ -34,7 +37,7 @@ import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
  * 	@value lg 大
  * 	@value xl 超大
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为base
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 base
  *
  * 	@value none 无
  * 	@value sm 小
@@ -46,7 +49,7 @@ import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
  * 	@value 3xl 无敌大
  * 	@value full 圆
  *
- * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error|...] 颜色，默认为base
+ * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error|...] 颜色，默认为 base
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -59,7 +62,7 @@ import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -124,7 +127,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-tag {
 	.inline-flex;
 	.items-center;
@@ -144,7 +147,7 @@ export default {
 	&-close-icon {
 		margin-left: 8rpx;
 	}
-	
+
 	// 隐藏
 	&-hidden {
 		transform: scale(0);

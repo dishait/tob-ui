@@ -4,8 +4,18 @@
 			<view class="dialog-header">{{ title }}</view>
 			<view class="dialog-main">{{ content }}</view>
 			<view class="dialog-footer">
-				<view class="dialog-cancel-text" v-if="cancelText" :class="[CancelColor]" @click.stop="cancel">{{ cancelText }}</view>
-				<view class="dialog-confirm-text" v-if="confirmText" :class="[ConfirmColor]" @click.stop="confirm">{{ confirmText }}</view>
+				<view
+					class="dialog-cancel-text"
+					v-if="cancelText"
+					:class="[CancelColor]"
+					@click.stop="cancel"
+				>{{ cancelText }}</view>
+				<view
+					class="dialog-confirm-text"
+					v-if="confirmText"
+					:class="[ConfirmColor]"
+					@click.stop="confirm"
+				>{{ confirmText }}</view>
 			</view>
 		</view>
 	</view>
@@ -19,8 +29,8 @@ import { $P, $C, Rounded, Emits, Size, textColorPresets } from '../../core'
  * @description 弹出框组件
  * @tutorial TODO 文档
  *
- * @property {Number} zIndex = [98|99|100|101|...] 层级，默认为100
- * @property {Boolean} closeOnClickMask = [false|true] 点击蒙版关闭，默认为true
+ * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为100
+ * @property {Boolean} closeOnClickMask = [false|true] 点击蒙版关闭，默认为 true
  *
  * @event {Function} click 点击事件
  * @event {Function} cancel 取消事件
@@ -142,8 +152,8 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
-@import (reference, less) '../../core/tool.less';
+@import (reference, less) "../../index.less";
+@import (reference, less) "../../core/tool.less";
 .t-dialog {
 	.flex;
 	.flex-col;

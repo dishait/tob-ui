@@ -1,8 +1,20 @@
 <template>
 	<view class="popup-mask" :class="[maskVisible, Mode]" @click="maskClick" :style="{ zIndex }">
-		<view class="t-popup" :style="{ zIndex }" :class="[visible, Rounded, Statusbar]" @click.stop="click">
+		<view
+			class="t-popup"
+			:style="{ zIndex }"
+			:class="[visible, Rounded, Statusbar]"
+			@click.stop="click"
+		>
 			<slot />
-			<t-icon v-if="closeIcon" :type="closeIcon" class="popup-close-icon" :class="[CloseIconPosition]" @click="hidden" size="1.3em" />
+			<t-icon
+				v-if="closeIcon"
+				:type="closeIcon"
+				class="popup-close-icon"
+				:class="[CloseIconPosition]"
+				@click="hidden"
+				size="1.3em"
+			/>
 		</view>
 	</view>
 </template>
@@ -19,12 +31,12 @@ const shouldApplyStatusbarModes = ['top', 'left', 'right']
  * @description 弹出层组件
  * @tutorial TODO 文档
  *
- * @property {String} closeIcon = [close|close-circle|...] 关闭图标，默认为空，为空时不显示
+ * @property {String} closeIcon = [close|close-circle|....] 关闭图标，默认为空，为空时不显示
  *
  * 	@value close 关闭
  * 	@value close-circle 圆形
  *
- * @property {Number} zIndex = [98|99|100|101|...] 层级，默认为100
+ * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为100
  *
  * @property {String} closeIconPosition = [left-0 top-0|right-0 top-0|bottom-0 left-0|bottom-0 right-0|...] 关闭图标位置，默认为空，不同模式不同位置
  *
@@ -33,7 +45,7 @@ const shouldApplyStatusbarModes = ['top', 'left', 'right']
  *
  * @property {Boolean} closeOnMaskClick = [true|false] 点击蒙版关闭，默认开启
  *
- * @property {String} mode = [top|bottom|center|left|right] 模式，默认为center
+ * @property {String} mode = [top|bottom|center|left|right] 模式，默认为 center
  *
  * 	@value top 顶部
  * 	@value bottom 底部
@@ -41,7 +53,7 @@ const shouldApplyStatusbarModes = ['top', 'left', 'right']
  * 	@value left 左侧
  * 	@value right 右侧
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为none，无圆角
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 none，无圆角
  *
  * 	@value none 无
  * 	@value sm 小
@@ -164,8 +176,8 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
-@import (reference, less) '../../core/tool.less';
+@import (reference, less) "../../index.less";
+@import (reference, less) "../../core/tool.less";
 .t-popup {
 	.relative;
 	.bg-white;

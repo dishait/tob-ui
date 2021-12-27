@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '@/uni_modules/tob-ui/index.less';
+@import (reference, less) "@/uni_modules/tob-ui/index.less";
 .title {
 	.ml-3;
 	.mb-4;

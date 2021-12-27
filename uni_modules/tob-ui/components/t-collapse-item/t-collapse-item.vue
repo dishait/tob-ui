@@ -4,10 +4,14 @@
 			<slot name="title" :title="title">
 				<view>{{ title }}</view>
 			</slot>
-			<slot name="right"><t-icon :type="rightIcon" class="collapse-item-arrow" :class="[Active]" /></slot>
+			<slot name="right">
+				<t-icon :type="rightIcon" class="collapse-item-arrow" :class="[Active]" />
+			</slot>
 		</view>
 		<view :style="Style" class="collapse-item-container">
-			<view :id="nanoid" class="py-1"><slot /></view>
+			<view :id="nanoid" class="py-1">
+				<slot />
+			</view>
 		</view>
 	</view>
 </template>
@@ -21,8 +25,8 @@ import { $P, $M, $C, $T, InjectEffects } from '../../core'
  *
  * @property {String} title 标题
  * @property {String} name 选中标识，必填
- * @property {String} rightIcon = [down] 右侧图标，默认为down
- * @property {Boolean} disabled = [true|false] 禁用，默认为false
+ * @property {String} rightIcon = [down] 右侧图标，默认为 down
+ * @property {Boolean} disabled = [true|false] 禁用，默认为 false
  *
  * @event {Function} click 点击事件
  */
@@ -92,7 +96,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-collapse-item {
 	.text-lg;
 }

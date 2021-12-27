@@ -15,7 +15,7 @@
 
 <script>
 import tIcon from '../t-icon/t-icon.vue'
-import { $P, $C, Size, Color, textColorPresets } from '../../core'
+import { $P, Size, Color, textColorPresets } from '../../core'
 
 /**
  * Breadcrumbs 面包屑
@@ -38,7 +38,7 @@ import { $P, $C, Size, Color, textColorPresets } from '../../core'
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -86,7 +86,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 .t-breadcrumbs {
 	.py-1;

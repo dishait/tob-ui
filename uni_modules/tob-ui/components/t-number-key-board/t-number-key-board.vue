@@ -2,7 +2,12 @@
 	<view class="t-number-key-board-mask" @click="maskClick" :class="[Visible]" :style="[Style]">
 		<view class="t-number-key-board" @click.stop="click">
 			<view class="number-key-board-main">
-				<view class="number-key-board-item" @click.stop="appendValue(v)" v-for="v of values" :key="v">{{ v }}</view>
+				<view
+					class="number-key-board-item"
+					@click.stop="appendValue(v)"
+					v-for="v of values"
+					:key="v"
+				>{{ v }}</view>
 			</view>
 			<view class="number-key-board-aside">
 				<view class="number-key-board-undo" @click.stop="undo">回退</view>
@@ -18,9 +23,9 @@ import { $P, $C, Emits, VModel } from "../../core"
  * NumberKeyBoard 数字键盘
  * @description 数字键盘组件
  * @tutorial TODO 文档
- * @property {Number} maxLength 最大长度，默认为100
- * @property {Number} zIndex = [98|99|100|101|...] 层级，默认为100
- * @property {Arrary} values 待选值，默认为[1, 2, 3, 4, 5, 6, 7, 8, 9, '00', 0, '.']
+ * @property {Number} maxlength 最大长度，默认为 100
+ * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为100
+ * @property {Arrary} values 待选值，默认为 [1, 2, 3, 4, 5, 6, 7, 8, 9, '00', 0, '.']
  *
  * @event {Function} click 点击事件
  * @event {Function} change 变更事件
@@ -34,7 +39,7 @@ export default {
 	],
 	props: $P({
 		zIndex: 100, // 层级
-		maxLength: 100, // 最大长度
+		maxlength: 100, // 最大长度
 		values: [1, 2, 3, 4, 5, 6, 7, 8, 9, '00', 0, '.'] // 待选值
 	}),
 	data() {
@@ -43,7 +48,7 @@ export default {
 		}
 	},
 	computed: $C({
-		Visible: 'number-key-board-show' ,// 可见性
+		Visible: 'number-key-board-show',// 可见性
 		// 自定义样式
 		Style() {
 			const { zIndex } = this
@@ -82,9 +87,9 @@ export default {
 		},
 		// 追加值
 		appendValue(v) {
-			const { maxLength } = this
+			const { maxlength } = this
 			v = this.VModelValue + v
-			if (v.length <= maxLength) {
+			if (v.length <= maxlength) {
 				this.updateVModelValue(v)
 			}
 		}
@@ -93,7 +98,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 .t-number-key-board-mask {
 	.fixed;
@@ -114,7 +119,7 @@ export default {
 	.bottom-0;
 	.flex-wrap;
 	.justify-between;
-	
+
 	height: 35vh;
 	width: calc(100% - 40rpx);
 	background-color: #f5f5f5;
@@ -124,7 +129,7 @@ export default {
 	&-main {
 		.flex;
 		.flex-wrap;
-		
+
 		width: 75%;
 		height: 35vh;
 	}
@@ -151,7 +156,7 @@ export default {
 		.flex;
 		.flex-col;
 		.items-center;
-		
+
 		height: 35vh;
 		width: calc(25% - 20rpx);
 	}

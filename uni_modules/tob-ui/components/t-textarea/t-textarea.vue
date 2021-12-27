@@ -50,37 +50,43 @@ import { $P, $M, $C, Color, createColorPresets, Emits, VModel, Size, Rounded } f
  *
  * @property {Boolean} disabled = [true|false]  是否禁用，默认为false
  *
- * @property {Number} maxlength = [140|...] 最大输入长度，设置为 -1 的时候不限制最大长度默认为-1。
+ * @property {Number} maxlength = [140|....] 最大输入长度，设置为 -1 的时候不限制最大长度默认为 -1。
  *
  * @property {Boolean} autoHeight = [true|false] 是否自动增高，设置auto-height时，style.height不生效。默认为false
  *
  * @property {Boolean} fixed = [true|false] 如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true。默认为false。各类小程序支持。
  *
- * @property {Number} cursorSpacing = [0] 指定光标与键盘的距离，单位 px 。取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离。默认为0。app与各类小程序支持。
+ * @property {Number} cursorSpacing = [0|....] 指定光标与键盘的距离，单位 px 。取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离。默认为 0。app 与各类小程序支持。
  *
- * @property {Number} cursor = [0] 指定focus时的光标位置。默认为0
+ * @property {Number} cursor = [0|....] 指定 focus 时的光标位置。默认为0
  *
- * @property {String} confirmType = [done] 设置键盘右下角按钮的文字，默认为done。微信小程序，app和vue支持。微信小程序 (2.16.0+)、百度小程序 (3.130.1+)、快手小程序支持。
+ * @property {String} confirmType = [done] 设置键盘右下角按钮的文字，默认为 done。微信小程序，app和 vue 支持。微信小程序 (2.16.0+)、百度小程序 (3.130.1+)、快手小程序支持。
+ * 
+ * 	@value send 发送
+ * 	@value search 搜索
+ * 	@value next 下一个
+ * 	@value go 前往
+ * 	@value done 完成
  *
- * @property {Boolean} showConfirmBar = [false|true] 是否显示键盘上方带有”完成“按钮那一栏，默认为false，微信小程序、百度小程序、QQ小程序支持。
+ * @property {Boolean} showConfirmBar = [false|true] 是否显示键盘上方带有”完成“按钮那一栏，默认为 false，微信小程序、百度小程序、QQ小程序支持。
  *
- * @property {Number} selectionStart = [-1|...] 光标起始位置，自动聚焦时有效，需与selection-end搭配使用，默认为-1.
+ * @property {Number} selectionStart = [-1|....] 光标起始位置，自动聚焦时有效，需与selection-end搭配使用，默认为 -1.
  *
- * @property {Number} selectionEnd = [-1|...] 光标结束位置，自动聚焦时有效，需与selection-start搭配使用，默认为-1。
+ * @property {Number} selectionEnd = [-1|....] 光标结束位置，自动聚焦时有效，需与selection-start搭配使用，默认为 -1。
  *
- * @property {Boolean} adjustPosition = [true|false] 键盘弹起时，是否自动上推页面，默认为true。仅App-Android（softinputMode 为 adjustResize 时无效）、微信小程序、百度小程序、QQ小程序有效
+ * @property {Boolean} adjustPosition = [true|false] 键盘弹起时，是否自动上推页面，默认为 true。仅 App-Android（softinputMode 为 adjustResize 时无效）、微信小程序、百度小程序、QQ小程序有效
  *
- * @property {Boolean} disableDefaultPadding = [true|false] 是否去掉 iOS 下的默认内边距，默认为false。微信小程序2.10.0、飞书小程序 3.46
+ * @property {Boolean} disableDefaultPadding = [true|false] 是否去掉 iOS 下的默认内边距，默认为 false。微信小程序2.10.0、飞书小程序3.46
  *
- * @property {Boolean} holdKeyboard = [true|false] focus时，点击页面的时候不收起键盘，默认为false。仅支持微信小程序2.8.2
+ * @property {Boolean} holdKeyboard = [true|false] focus时，点击页面的时候不收起键盘，默认为 false。仅支持微信小程序2.8.2
  *
- * @property {Boolean} autoBlur = [true|false] 	键盘收起时，是否自动失去焦点，默认为false，App-vue 3.0.0+ ，App-nvue不支持
+ * @property {Boolean} autoBlur = [true|false] 	键盘收起时，是否自动失去焦点，默认为 false，App-vue 3.0.0+ ，App-nvue不支持
  *
- * @property {Boolean} confirmHold = [false|true] 点击键盘右下角按钮时是否保持键盘不收起，默认为false
+ * @property {Boolean} confirmHold = [false|true] 点击键盘右下角按钮时是否保持键盘不收起，默认为 false
  *
- * @property {Boolean} focus = [true|false] 聚焦
+ * @property {Boolean} focus = [true|false] 聚焦，默认为 false
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为base
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 base
  *
  * 	@value none 无
  * 	@value sm 小
@@ -92,7 +98,7 @@ import { $P, $M, $C, Color, createColorPresets, Emits, VModel, Size, Rounded } f
  * 	@value 3xl 无敌大
  * 	@value full 圆
  *
- * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error|...] 颜色，默认为base
+ * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error|...] 颜色，默认为 base
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -105,7 +111,7 @@ import { $P, $M, $C, Color, createColorPresets, Emits, VModel, Size, Rounded } f
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -218,7 +224,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-textarea {
 	.flex;
 	.relative;

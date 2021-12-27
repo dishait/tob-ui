@@ -1,7 +1,7 @@
 <template>
 	<view class="pb-20">
 		<t-nav-bar title="Btn" sticky />
-		
+
 		<example title="颜色" customClass="mt-10">
 			<view class="container">
 				<t-btn v-for="v in colors" :key="v.type" class="item" :color="v.type">{{ v.desc }}</t-btn>
@@ -37,13 +37,12 @@
 				<t-btn v-for="v in roundeds" :key="v.type" class="item" :rounded="v.type">{{ v.desc }}</t-btn>
 			</view>
 		</example>
-		
+
 		<example title="阴影">
 			<view class="container">
 				<t-btn v-for="v in shadows" :key="v.type" class="item" :shadow="v.type" ghost>{{ v.desc }}</t-btn>
 			</view>
 		</example>
-	
 
 		<example title="禁用">
 			<view class="container">
@@ -62,8 +61,6 @@
 				<t-btn class="item" loading>加载中</t-btn>
 			</view>
 		</example>
-		
-		
 	</view>
 </template>
 
@@ -85,7 +82,7 @@ export default {
 </script>
 
 <style lang="less">
-@import (reference) '@/uni_modules/tob-ui/index.less';
+@import (reference) "@/uni_modules/tob-ui/index.less";
 
 .container {
 	.mx-2;

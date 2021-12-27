@@ -4,53 +4,95 @@
 
 		<example title="基础" customClass="mt-8">
 			<view class="mx-2">
-				<t-grid><t-grid-item v-for="v of list" :key="v.icon" :icon="v.icon" :text="v.desc" /></t-grid>
+				<t-grid>
+					<t-grid-item v-for="v of list" :key="v.icon" :icon="v.icon" :text="v.desc" />
+				</t-grid>
 			</view>
 		</example>
 
 		<example title="颜色">
 			<view class="mx-2">
-				<t-grid><t-grid-item v-for="v of list" :key="v.icon" color="error" :icon="v.icon" :text="v.desc" /></t-grid>
+				<t-grid>
+					<t-grid-item v-for="v of list" :key="v.icon" color="error" :icon="v.icon" :text="v.desc" />
+				</t-grid>
 			</view>
 		</example>
 
 		<example title="高亮">
 			<view class="mx-2">
-				<t-grid><t-grid-item v-for="v of list" color="error" light :key="v.icon" :icon="v.icon" :text="v.desc" /></t-grid>
+				<t-grid>
+					<t-grid-item
+						v-for="v of list"
+						color="error"
+						light
+						:key="v.icon"
+						:icon="v.icon"
+						:text="v.desc"
+					/>
+				</t-grid>
 			</view>
 		</example>
 
 		<example title="轮廓">
 			<view class="mx-2">
-				<t-grid><t-grid-item v-for="v of list" color="error" outline :key="v.icon" :icon="v.icon" :text="v.desc" /></t-grid>
+				<t-grid>
+					<t-grid-item
+						v-for="v of list"
+						color="error"
+						outline
+						:key="v.icon"
+						:icon="v.icon"
+						:text="v.desc"
+					/>
+				</t-grid>
 			</view>
 		</example>
 
 		<example title="仅图标">
 			<view class="mx-2">
-				<t-grid><t-grid-item v-for="v of list" color="success" light :key="v.icon" :icon="v.icon" /></t-grid>
+				<t-grid>
+					<t-grid-item v-for="v of list" color="success" light :key="v.icon" :icon="v.icon" />
+				</t-grid>
 			</view>
 		</example>
 
 		<example title="尺寸">
 			<view class="mx-2">
-				<t-grid><t-grid-item v-for="v of sizes" color="primary" :size="v.type" light :key="v.icon" :icon="v.icon" :text="v.desc" /></t-grid>
+				<t-grid>
+					<t-grid-item
+						v-for="v of sizes"
+						color="primary"
+						:size="v.type"
+						light
+						:key="v.icon"
+						:icon="v.icon"
+						:text="v.desc"
+					/>
+				</t-grid>
 			</view>
 		</example>
 
 		<example title="插槽">
 			<view class="mx-2">
 				<t-grid :column="3">
-					<t-grid-item size="h-20"><t-img size="w-30 h-20" mode="aspectFill" :src="imgSrc" /></t-grid-item>
-					<t-grid-item size="h-20"><t-img size="w-30 h-20" mode="aspectFill" :src="imgSrc" /></t-grid-item>
-					<t-grid-item size="h-20"><t-img size="w-30 h-20" mode="aspectFill" :src="imgSrc" /></t-grid-item>
+					<t-grid-item size="h-20">
+						<t-img size="w-30 h-20" mode="aspectFill" :src="imgSrc" />
+					</t-grid-item>
+					<t-grid-item size="h-20">
+						<t-img size="w-30 h-20" mode="aspectFill" :src="imgSrc" />
+					</t-grid-item>
+					<t-grid-item size="h-20">
+						<t-img size="w-30 h-20" mode="aspectFill" :src="imgSrc" />
+					</t-grid-item>
 				</t-grid>
 			</view>
 		</example>
 
 		<example title="跳转">
 			<view class="mx-2">
-				<t-grid><t-grid-item color="base" to="/pages/base/button/button" icon="experiment" text="btn页" /></t-grid>
+				<t-grid>
+					<t-grid-item color="base" to="/pages/base/button/button" icon="experiment" text="btn页" />
+				</t-grid>
 			</view>
 		</example>
 	</view>
@@ -122,16 +164,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped lang="less">
-@import (reference, less) '@/uni_modules/tob-ui/index.less';
-
-.slot-hack {
-	.w-30;
-	.h-20;
-	/* #ifdef H5 */
-	.w-full;
-	.h-full;
-	/* #endif */
-}
-</style>

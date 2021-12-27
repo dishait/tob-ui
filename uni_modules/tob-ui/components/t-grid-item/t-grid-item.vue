@@ -1,5 +1,10 @@
 <template>
-	<view class="t-grid-item" @click="click" :style="Style" :class="[Align, Justify, Direction, Color, Rounded, Shadow, Size]">
+	<view
+		class="t-grid-item"
+		@click="click"
+		:style="Style"
+		:class="[Align, Justify, Direction, Color, Rounded, Shadow, Size]"
+	>
 		<slot>
 			<t-icon :type="icon" v-if="icon" size="1.5em" />
 			<text class="grid-item-text" v-if="text">{{ text }}</text>
@@ -17,11 +22,11 @@ import { $P, $C, Color, Rounded, Shadow, Size, Flex } from '../../core'
  *
  * @property {String} icon 图标
  * @property {String} text 文本
- * @property {String} to = [/pages/|...]跳转，只允许navigateTo
+ * @property {String} to = [/pages/|....]跳转，只允许navigateTo
  * @property {Boolean} light = [true|false] 高亮，默认为false
  * @property {Boolean} outline = [true|false] 轮廓，默认为false
  * 
-* @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为none
+* @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为 none
  *
  * 	@value none 无
  * 	@value sm 小
@@ -30,7 +35,7 @@ import { $P, $C, Color, Rounded, Shadow, Size, Flex } from '../../core'
  * 	@value lg 大
  * 	@value xl 超大
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 md
  *
  * 	@value none 无
  * 	@value sm 小
@@ -55,7 +60,7 @@ import { $P, $C, Color, Rounded, Shadow, Size, Flex } from '../../core'
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -78,7 +83,11 @@ export default {
 				lg: 'py-2 text-lg'
 			}
 		}),
-		Flex({ align: 'center', justify: 'center', direction: 'col' })
+		Flex({
+			align: 'center',
+			justify: 'center',
+			direction: 'col'
+		})
 	],
 	emits: ['click'],
 	props: $P({
@@ -108,7 +117,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-grid-item {
 	.inline-flex;
 

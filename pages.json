@@ -1,88 +1,120 @@
 {
-	"pages": [{
-		"path": "pages/home/home"
-	}, {
-		"path": "pages/base/img/img"
-	}, {
-		"path": "pages/show/tag/tag"
-	}, {
-		"path": "pages/base/cell/cell"
-	}, {
-		"path": "pages/base/popup/popup"
-	}, {
-		"path": "pages/base/layout/layout"
-	}, {
-		"path": "pages/show/divider/divider"
-	}, {
-		"path": "pages/navigation/grid/grid"
-	}, {
-		"path": "pages/feedback/notify/notify"
-	}, {
-		"path": "pages/feedback/dialog/dialog"
-	}, {
-		"path": "pages/navigation/navBar/navBar"
-	}, {
-		"path": "pages/feedback/overlay/overlay"
-	}, {
-		"path": "pages/feedback/actionSheet/actionSheet"
-	}, {
-		"path": "pages/feedback/dropdownMenu/dropdownMenu"
-	}, {
-		"path": "pages/base/btn/btn"
-	}, {
-		"path": "pages/show/noticeBar/noticeBar"
-	}, {
-		"path": "pages/show/pendant/pendant"
-	}, {
-		"path": "pages/show/collapse/collapse"
-	}, {
-		"path": "pages/show/steps/steps"
-	}, {
-		"path": "pages/show/card/card"
-	}, {
-		"path": "pages/navigation/link/link"
-	}, {
-		"path": "pages/navigation/breadcrumbs/breadcrumbs"
-	}, {
-		"path": "pages/navigation/menu/menu"
-	}, {
-		"path": "pages/navigation/pagination/pagination"
-	}, {
-		"path": "pages/show/banner/banner"
-	}, {
-		"path": "pages/form/input/input"
-	}, {
-		"path": "pages/form/search/search"
-	}, {
-		"path": "pages/form/radio/radio"
-	}, {
-		"path": "pages/form/slider/slider"
-	}, {
-		"path": "pages/form/switch/switch"
-	}, {
-		"path": "pages/form/checkbox/checkbox"
-	}, {
-		"path": "pages/form/stepper/stepper"
-	}, {
-		"path": "pages/form/textarea/textarea"
-	}, {
-		"path": "pages/base/icon/icon"
-	}, {
-		"path": "pages/form/numberKeyBoard/numberKeyBoard"
-	}, {
-		"path": "pages/form/passwordInput/passwordInput"
-	}, {
-		"path": "pages/form/form/form"
-	}    ,{
-            "path" : "pages/others/backTop/backTop",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	"pages": [
+		{
+			"path": "pages/home/home"
+		},
+		{
+			"path": "pages/base/img/img"
+		},
+		{
+			"path": "pages/show/tag/tag"
+		},
+		{
+			"path": "pages/base/cell/cell"
+		},
+		{
+			"path": "pages/base/popup/popup"
+		},
+		{
+			"path": "pages/base/layout/layout"
+		},
+		{
+			"path": "pages/show/divider/divider"
+		},
+		{
+			"path": "pages/navigation/grid/grid"
+		},
+		{
+			"path": "pages/feedback/notify/notify"
+		},
+		{
+			"path": "pages/feedback/dialog/dialog"
+		},
+		{
+			"path": "pages/navigation/navBar/navBar"
+		},
+		{
+			"path": "pages/feedback/overlay/overlay"
+		},
+		{
+			"path": "pages/feedback/actionSheet/actionSheet"
+		},
+		{
+			"path": "pages/feedback/dropdownMenu/dropdownMenu"
+		},
+		{
+			"path": "pages/base/btn/btn"
+		},
+		{
+			"path": "pages/show/noticeBar/noticeBar"
+		},
+		{
+			"path": "pages/show/pendant/pendant"
+		},
+		{
+			"path": "pages/show/collapse/collapse"
+		},
+		{
+			"path": "pages/show/steps/steps"
+		},
+		{
+			"path": "pages/show/card/card"
+		},
+		{
+			"path": "pages/navigation/link/link"
+		},
+		{
+			"path": "pages/navigation/breadcrumbs/breadcrumbs"
+		},
+		{
+			"path": "pages/navigation/menu/menu"
+		},
+		{
+			"path": "pages/navigation/pagination/pagination"
+		},
+		{
+			"path": "pages/show/banner/banner"
+		},
+		{
+			"path": "pages/form/input/input"
+		},
+		{
+			"path": "pages/form/search/search"
+		},
+		{
+			"path": "pages/form/radio/radio"
+		},
+		{
+			"path": "pages/form/slider/slider"
+		},
+		{
+			"path": "pages/form/switch/switch"
+		},
+		{
+			"path": "pages/form/checkbox/checkbox"
+		},
+		{
+			"path": "pages/form/stepper/stepper"
+		},
+		{
+			"path": "pages/form/textarea/textarea"
+		},
+		{
+			"path": "pages/base/icon/icon"
+		},
+		{
+			"path": "pages/form/numberKeyBoard/numberKeyBoard"
+		},
+		{
+			"path": "pages/form/passwordInput/passwordInput"
+		},
+		{
+			"path": "pages/form/form/form"
+		},
+		{
+			"path": "pages/others/backTop/backTop"
+		}
+	],
 	"globalStyle": {
 		"navigationStyle": "custom",
 		"navigationBarTextStyle": "black"

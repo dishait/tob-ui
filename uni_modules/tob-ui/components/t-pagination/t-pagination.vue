@@ -1,15 +1,23 @@
 <template>
 	<view class="t-pagination" :class="[Color, Shadow, Rounded, Size]" @click="click">
-		<view class="pagination-left-icon" :class="[PrevDisable]" @click="prev"><t-icon :type="prevDisable ? 'stop' : 'left'" /></view>
+		<view class="pagination-left-icon" :class="[PrevDisable]" @click="prev">
+			<t-icon :type="prevDisable ? 'stop' : 'left'" />
+		</view>
 		<view v-if="!simple">
 			<text v-if="prevEllipsisVisible" @click="prevPage" class="pagination-ellipsis">...</text>
-			<text v-for="v of items" :key="v" @click="itemClick(v)" class="pagination-item pagination-no-current" :class="VModelValue === v && 'pagination-current'">
-				{{ v }}
-			</text>
+			<text
+				v-for="v of items"
+				:key="v"
+				@click="itemClick(v)"
+				class="pagination-item pagination-no-current"
+				:class="VModelValue === v && 'pagination-current'"
+			>{{ v }}</text>
 			<text v-if="nextEllipsisVisible" @click="nextPage" class="pagination-ellipsis">...</text>
 		</view>
 		<text class="pagination-item" v-else>{{ VModelValue }} / {{ total }}</text>
-		<view class="pagination-right-icon" :class="[NextDisable]" @click="next"><t-icon :type="nextDisable ? 'stop' : 'right'" /></view>
+		<view class="pagination-right-icon" :class="[NextDisable]" @click="next">
+			<t-icon :type="nextDisable ? 'stop' : 'right'" />
+		</view>
 	</view>
 </template>
 
@@ -21,11 +29,11 @@ import { $P, $C, Size, Color, VModel, Emits, Shadow, Rounded } from '../../core'
  * @description 回到顶部组件
  * @tutorial TODO 文档
  *
- * @property {Boolean} light = [true|false] 亮色，默认为false
- * @property {Boolean} outline = [true|false] 轮廓，默认为false
- * @property {Boolean} simple = [true|false] 简单模式，默认为false
- * @property {Number} pageSize = [3|4|5|...] 每次显示多少页，默认为4，保持在5以内会美观
- * @property {Number} total = [4|5|10|20|99|...] 总页数，默认为4，保持在99以内会更美观，大数据情况尽量用简单模式会更美观
+ * @property {Boolean} light = [true|false] 亮色，默认为 false
+ * @property {Boolean} outline = [true|false] 轮廓，默认为 false
+ * @property {Boolean} simple = [true|false] 简单模式，默认为 false
+ * @property {Number} pageSize = [3|4|5|....] 每次显示多少页，默认为4，保持在5以内会美观
+ * @property {Number} total = [4|5|10|20|99|....] 总页数，默认为4，保持在99以内会更美观，大数据情况尽量用简单模式会更美观
  *
  * @property {String} size = [xs|sm|md|lg|...] 大小，默认为md
  *
@@ -56,7 +64,7 @@ import { $P, $C, Size, Color, VModel, Emits, Shadow, Rounded } from '../../core'
  * 	@value lg 大
  * 	@value xl 超大
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为bsae，基础
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 bsae
  *
  * 	@value none 无
  * 	@value sm 小
@@ -181,7 +189,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 // 分页
 .t-pagination {
 	.inline-flex;
@@ -223,13 +231,12 @@ export default {
 		.justify-center;
 		.opacity-50;
 
-		
 		/* #ifdef H5 */
 		.cursor-pointer;
 		/* #endif */
 
 		transition: transform 0.15s ease-in-out;
-		
+
 		&:active {
 			.opacity-100;
 			transform: scale(0.85);

@@ -1,5 +1,10 @@
 <template>
-	<view class="t-nav-bar" :style="{ zIndex, height }" :class="[Sticky, Color, Shadow]" @click="click">
+	<view
+		class="t-nav-bar"
+		:style="{ zIndex, height }"
+		:class="[Sticky, Color, Shadow]"
+		@click="click"
+	>
 		<view class="nav-bar-left" @click="leftClick">
 			<slot name="left">
 				<view class="nav-bar-left-seat">
@@ -37,16 +42,16 @@ import { $P, $C, Color, Shadow, Emits } from '../../core'
  *
  * @property {String} title 标题
  * 
- * @property {Number} zIndex = [98|99|100|101|...] 层级，默认为100
- * @property {String} leftIcon 左侧图标，默认为left箭头，为空字符串时将不显示
+ * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为 100
+ * @property {String} leftIcon 左侧图标，默认为 left 箭头，为空字符串时将不显示
  * @property {String} leftText 左侧文本
  * @property {String} rightIcon 右侧图标
  * @property {String} rightText 右侧文本
  *
- * @property {Number} delta = [1|2|3|...] 返回层级，默认为1
- * @property {Boolean} sticky = [true|false] 粘性定位，默认为false
- * @property {Boolean} customGo = [true|false] 自定义跳转，默认为false走navigateBack
- * @property {String} height = [44px|48px] 高度，默认小程序端统一48px，其他端统一44px
+ * @property {Number} delta = [1|2|3|....] 返回层级，默认为 1
+ * @property {Boolean} sticky = [true|false] 粘性定位，默认为 false
+ * @property {Boolean} customGo = [true|false] 自定义跳转，默认为 false 走 navigateBack
+ * @property {String} height = [44px|48px] 高度，默认小程序端统一 48px，其他端统一 44px
  *
  *
  * @property {String} color = [primary|secondary|accent|neutral|base|info|success|warning|error|...] 类型，默认为空
@@ -130,7 +135,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 // 导航栏容器
 .t-nav-bar {
 	.flex;

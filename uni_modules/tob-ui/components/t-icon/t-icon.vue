@@ -1,5 +1,10 @@
 <template>
-	<text class="t-icon" :class="[classPrefix, Color, Type]" :style="{ fontSize: size }" @click="click" />
+	<text
+		class="t-icon"
+		:class="[classPrefix, Color, Type]"
+		:style="{ fontSize: size }"
+		@click="click"
+	/>
 </template>
 
 <script>
@@ -13,7 +18,7 @@ import { $P, $C, Emits, Color, textColorPresets } from '../../core'
  * @property {String} classPrefix = [tob-ui-icon|iconfont|...] 默认为tob-ui-icon，前缀
  * @property {String} size 尺寸，默认继承父级，允许接受单位有rpx，px，em等
  * 
- * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error] 颜色类型，默认空，继承父级颜色
+ * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error|...] 颜色类型，默认空，继承父级颜色
  *
  * 	@value primary 主色
  * 	@value secondary 次要色
@@ -47,8 +52,8 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import './icon.css';
-@import (reference, less) '../../index.less';
+@import "./icon.css";
+@import (reference, less) "../../index.less";
 
 .t-icon {
 	.inline-block;

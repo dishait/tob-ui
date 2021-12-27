@@ -1,5 +1,7 @@
 <template>
-	<view class="t-grid" @click="click"><slot /></view>
+	<view class="t-grid" @click="click">
+		<slot />
+	</view>
 </template>
 
 <script>
@@ -10,8 +12,8 @@ import { $P, $C, Emits } from '../../core'
  * @description 宫格组件
  * @tutorial TODO 文档
  *
- * @property {Number} column = [3|4|5|6|...] 列数，默认为4列
- * @property {String} gutter = [5rpx|10rpx|20rpx|...] 间隔，默认为10rpx
+ * @property {Number} column = [3|4|5|6|....] 列数，默认为 4 列
+ * @property {String} gutter = [5rpx|10rpx|20rpx|....] 间隔，默认为 10rpx
  *
  * @event {Function} click 点击事件
  */
@@ -32,7 +34,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-grid {
 	.w-full;
 }

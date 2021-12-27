@@ -18,9 +18,7 @@
 			:cursor-spacing="cursorSpacing"
 			:adjust-position="adjustPosition"
 			:selection-start="selectionStart"
-			
 			v-on:keyup.enter="confirm"
-			
 			@blur="blur"
 			@focus="focus"
 			@input="change"
@@ -29,8 +27,13 @@
 		/>
 
 		<t-icon v-if="ClearIconVisible" class="input-right-icon" type="close-circle" @click="reset" />
-		
-		<t-icon v-if="PasswordIconVisible" class="input-right-icon" :type="PasswordIcon" @click="togglePasswordVisible" />
+
+		<t-icon
+			v-if="PasswordIconVisible"
+			class="input-right-icon"
+			:type="PasswordIcon"
+			@click="togglePasswordVisible"
+		/>
 	</view>
 </template>
 
@@ -44,19 +47,20 @@ import { $P, $C, Color, createColorPresets, Emits, VModel, Size, Rounded } from 
  * @tutorial TODO 文档
  *
  * @property {String} placeholder 占位符
- * @property {Boolean} disabled = [true|false] 禁用
  * @property {Number} maxlength 最大长度，默认为 -1, 无限长
- * @property {Boolean} primordial = [true|false] 原生样式
- * @property {Number} cursor = [true|false] 指定focus时的光标位置
+ * @property {Boolean} disabled = [true|false] 禁用，默认为 false
+ * @property {Boolean} primordial = [true|false] 原生样式，默认为 false
+ * @property {Number} cursor = [0|....] 指定 focus 时的光标位置，默认为 0
  * @property {Boolean} autoBlur = [true|false] 键盘收起，自动失去焦点（只支持app）默认为false
  * @property {Boolean} adjustPosition = [true|false] 键盘弹起时，是否自动上推页面, 默认为true。支持	App-Android（vue 页面 softinputMode 为 adjustResize 时无效，使用 x5 内核时无效）、微信小程序、百度小程序、QQ小程序
  * 
- * @property {Number} selectionStart 光标起始位置，自动聚集时有效，需与selection-end搭配使用，默认为-1
- * @property {Number} selectionEnd 光标结束位置，自动聚集时有效，需与selection-start搭配使用，默认为-1
+ * @property {Number} selectionStart 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用，默认为 -1
+ * @property {Number} selectionEnd 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用，默认为 -1
  * 
- * @property {Boolean} holdKeyboard = [true|false] focus时，点击页面的时候不收起键盘(微信小程序2.8.2)，默认为false收起
+ * @property {Boolean} holdKeyboard = [true|false] focus时，点击页面的时候不收起键盘(微信小程序2.8.2)，默认为 false 收起
  * 
- * @property {Boolean} confirmHold = [true|false] 点击键盘右下角按钮时是否保持键盘不收起，默认为false收起
+ * @property {Boolean} confirmHold = [true|false] 点击键盘右下角按钮时是否保持键盘不收起，默认为 false 收起
+ * 
  * @property {Number} cursorSpacing 指定光标与键盘的距离，单位 px， 默认为0。取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离，支持App、微信小程序、百度小程序、QQ小程序
  *
  * @property {String} confirmType = [send|search|next|go|done] 设置键盘右下角按钮的文字，仅在 type="text" 时生效
@@ -67,7 +71,7 @@ import { $P, $C, Color, createColorPresets, Emits, VModel, Size, Rounded } from 
  * 	@value go 前往
  * 	@value done 完成
  *
- * @property {String} type = [text|number|digit|idcard|password] 类型，默认为text文本
+ * @property {String} type = [text|number|digit|idcard|password] 类型，默认为 text
  *
  * 	@value text 文本
  * 	@value number 数字
@@ -238,14 +242,14 @@ export default {
 		},
 		// 切换可见性
 		togglePasswordVisible() {
-			this.passwordVisible = !this.passwordVisible 
+			this.passwordVisible = !this.passwordVisible
 		}
 	}
 }
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 // 容器
 .t-input {
 	.w-full;
@@ -266,7 +270,7 @@ export default {
 	top: 50%;
 	color: #adbac7;
 	transform: translate(-20rpx, -50%);
-	
+
 	/* #ifndef MP */
 	.cursor-pointer;
 	/* #endif */
@@ -302,7 +306,7 @@ export default {
 		.border-neutral;
 		--input-color: var(--neutral);
 	}
-	
+
 	// 基础
 	&-base {
 		.border-base;

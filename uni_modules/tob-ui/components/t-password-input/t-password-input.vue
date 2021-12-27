@@ -1,8 +1,11 @@
 <template>
 	<view class="t-password-input" @click="click" :style="[Style]">
-		<text class="password-input-item" :class="[focus && FocusIndex === i && 'password-input-item-twinkle', FocusIndex > i && Visible, Size, Rounded, Color, Shadow]" v-for="(v, i) of length" :key="v">
-			{{ visible ? values[i] || '' : '' }}
-		</text>
+		<text
+			class="password-input-item"
+			:class="[focus && FocusIndex === i && 'password-input-item-twinkle', FocusIndex > i && Visible, Size, Rounded, Color, Shadow]"
+			v-for="(v, i) of length"
+			:key="v"
+		>{{ visible ? values[i] || '' : '' }}</text>
 	</view>
 </template>
 
@@ -13,11 +16,12 @@ import { $P, $C, Emits, Size, Rounded, Color, Shadow } from '../../core'
  * @description 密码输入框组件
  * @tutorial TODO 文档
  * @property {String} values 值
- * @property {Number} length 长度，默认为5
- * @property {Boolean} focus = [true, false] 聚焦，默认为true
- * @property {Boolean} visible = [true, false] 可见性，默认为false
+ * @property {Number} length 长度，默认为 5
+ * @property {Boolean} focus = [true|false] 聚焦，默认为 true
+ * @property {Boolean} visible = [true|false] 可见性，默认为 false
+ * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为 100
  * 
-* @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为none
+* @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为 none
  *
  * 	@value none 无
  * 	@value sm 小
@@ -26,7 +30,7 @@ import { $P, $C, Emits, Size, Rounded, Color, Shadow } from '../../core'
  * 	@value lg 大
  * 	@value xl 超大
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为base
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 base
  *
  * 	@value none 无
  * 	@value sm 小
@@ -38,7 +42,7 @@ import { $P, $C, Emits, Size, Rounded, Color, Shadow } from '../../core'
  * 	@value 3xl 无敌大
  * 	@value full 圆
  *
- * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error|...] 颜色，默认为base
+ * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error|...] 颜色，默认为 base
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -51,7 +55,7 @@ import { $P, $C, Emits, Size, Rounded, Color, Shadow } from '../../core'
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -107,7 +111,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 // 容器
 .t-password-input {
 	.flex;
@@ -128,7 +132,7 @@ export default {
 
 	// 闪烁的 |
 	&-twinkle::after {
-		content: '|';
+		content: "|";
 		animation: 0.6s steps(36) infinite alternate twinkle;
 	}
 
@@ -138,7 +142,7 @@ export default {
 		.h-2;
 		.rounded-full;
 
-		content: '';
+		content: "";
 		background-color: currentColor;
 	}
 }

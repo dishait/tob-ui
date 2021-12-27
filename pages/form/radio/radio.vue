@@ -6,25 +6,22 @@
 			<view class="ml-6">
 				<t-radio-group v-model="color">
 					<view v-for="v of colors" class="m-2" :key="v.type">
-						<t-radio  :color="v.type" :value="v.type">{{ v.desc }}</t-radio>
+						<t-radio :color="v.type" :value="v.type">{{ v.desc }}</t-radio>
 					</view>
 				</t-radio-group>
 			</view>
 		</example>
-		
-		
+
 		<example title="圆角">
 			<view class="ml-6">
 				<t-radio-group v-model="rounded">
 					<view v-for="v of roundeds" :key="v.type" class="m-2">
 						<t-radio :rounded="v.type" :value="v.type">{{ v.desc }}</t-radio>
 					</view>
-					
 				</t-radio-group>
 			</view>
 		</example>
-		
-		
+
 		<example title="尺寸">
 			<view class="ml-6">
 				<t-radio-group v-model="size">
@@ -34,8 +31,7 @@
 				</t-radio-group>
 			</view>
 		</example>
-		
-		
+
 		<example title="禁用">
 			<view class="ml-6">
 				<t-radio-group v-model="abled">

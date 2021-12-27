@@ -1,5 +1,7 @@
 <template>
-	<view class="t-card-title" :class="[Size]" @click="click"><slot /></view>
+	<view class="t-card-title" :class="[Size]" @click="click">
+		<slot />
+	</view>
 </template>
 
 <script>
@@ -9,7 +11,7 @@ import { Emits, Size } from '../../core'
  * @description 卡片标题区域组件
  * @tutorial TODO 文档
  * 
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -35,7 +37,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 .t-card-title {
 	line-height: 1.75rem;

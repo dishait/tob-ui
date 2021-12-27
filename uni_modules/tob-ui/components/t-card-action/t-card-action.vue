@@ -1,5 +1,7 @@
 <template>
-	<view class="t-card-action" :class="[Justify, Align, Size]" @click="click"><slot /></view>
+	<view class="t-card-action" :class="[Justify, Align, Size]" @click="click">
+		<slot />
+	</view>
 </template>
 
 <script>
@@ -17,7 +19,7 @@ import { Flex, Emits, Size } from '../../core'
  * 	@value baseline 文字基线对齐
  * 	@value stretch 填充整个容器高度
  *
- * @property {String} justify = [start|end|around|center|between|evenly] 主轴对齐方式，默认为 start 头部
+ * @property {String} justify = [start|end|around|center|between|evenly] 主轴对齐方式，默认为 start
  *
  *  @value start 头部
  * 	@value end 尾部
@@ -26,7 +28,7 @@ import { Flex, Emits, Size } from '../../core'
  *  @value between 靠两头
  *  @value evenly 等距
  * 
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -53,7 +55,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-card-action {
 	.flex;
 	.flex-wrap;

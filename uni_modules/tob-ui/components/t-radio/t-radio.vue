@@ -16,7 +16,7 @@ import { $P, $C, $M, Color, Size, Rounded, InjectEffects, createColorPresets } f
  * @property {Boolean} disabled = [true|false] 禁用
  * @property {String} value 标识，会被 t-radio-group 记录
  * 
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为full
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 full
  *
  * 	@value none 无
  * 	@value sm 小
@@ -28,7 +28,7 @@ import { $P, $C, $M, Color, Size, Rounded, InjectEffects, createColorPresets } f
  * 	@value 3xl 无敌大
  * 	@value full 圆
  * 
- * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error] 颜色，默认为base
+ * @property {String} color = [primary|secondary|accent|neutral|info|success|warning|error] 颜色，默认为 base
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -41,7 +41,7 @@ import { $P, $C, $M, Color, Size, Rounded, InjectEffects, createColorPresets } f
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -97,7 +97,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 // label容器
 .t-radio-label {

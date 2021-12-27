@@ -28,9 +28,9 @@ import { $P, $C, Emits } from '../../core/index.js'
  * @property {String} title 标题，默认为空
  * @property {String} value 内容，默认为空
  * @property {String} leftIcon 左图标，默认为空
- * @property {String} rightIcon = [right|...] 右图标，默认为空
- * @property {String} to = [/pages/|...]跳转，只允许navigateTo
- * @property {Boolean} center = [false|true] 垂直居中，默认为false
+ * @property {String} rightIcon = [right|....] 右图标，默认为空
+ * @property {String} to = [/pages/|....]跳转，只允许navigateTo
+ * @property {Boolean} center = [false|true] 垂直居中，默认为 false
  * 
  * @event {Function} click 点击事件
  */
@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 .t-cell {
 	.p-2;
@@ -93,12 +93,12 @@ export default {
 	&-center {
 		.items-center;
 	}
-	
+
 	// 标题
 	&-title {
 		.text-lg;
 	}
-	
+
 	// 标题与内容内对齐
 	&-title,
 	&-value {

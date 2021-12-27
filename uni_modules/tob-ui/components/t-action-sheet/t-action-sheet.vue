@@ -4,7 +4,13 @@
 			<view class="action-sheet-header" v-if="desc" @click="headerClick">{{ desc }}</view>
 
 			<view class="action-sheet-main">
-				<view class="action-sheet-item" v-for="v of actions" :key="v.name" @click="actionClick(v)" :class="[v.disabled && 'action-sheet-item-disabled', v.color]">
+				<view
+					class="action-sheet-item"
+					v-for="v of actions"
+					:key="v.name"
+					@click="actionClick(v)"
+					:class="[v.disabled && 'action-sheet-item-disabled', v.color]"
+				>
 					<text>{{ v.name }}</text>
 					<text v-if="v.desc" class="action-sheet-item-desc">{{ v.desc }}</text>
 				</view>
@@ -25,11 +31,11 @@ import { $P, $C, Emits, VModel, Rounded } from '../../core'
  * @tutorial TODO 文档
  *
  * @property {String} desc 描述，位于面板头部
- * @property {Number} zIndex = [98|99|100|101|...] 层级，默认为100
- * @property {Array} actions 动作集，支持选项name，desc，color，disabled
- * @property {Array} cancelText = [取消|cancel|...] 取消文本，默认为空字符串，不显示
+ * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为100
+ * @property {Array} actions 动作集，支持选项 name，desc，color，disabled
+ * @property {Array} cancelText = [取消|cancel|....] 取消文本，默认为空字符串，不显示
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为lg
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 lg
  *
  * 	@value none 无
  * 	@value sm 小
@@ -50,8 +56,8 @@ import { $P, $C, Emits, VModel, Rounded } from '../../core'
 export default {
 	name: 't-action-sheet',
 	mixins: [
-		VModel({ value: {} }), 
-		Rounded({ rounded: 'lg' }), 
+		VModel({ value: {} }),
+		Rounded({ rounded: 'lg' }),
 		Emits(['click', 'headerClick'])
 	],
 	emits: [
@@ -117,8 +123,8 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
-@import (reference, less) '../../core/tool.less';
+@import (reference, less) "../../index.less";
+@import (reference, less) "../../core/tool.less";
 
 .t-action-sheet {
 	.fixed;

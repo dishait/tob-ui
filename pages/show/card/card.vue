@@ -3,9 +3,7 @@
 		<t-nav-bar title="Card" sticky />
 
 		<view class="mt-5">
-			<t-notice-bar :scrollable="false">
-				卡片组件是由多个非常灵活的组件构成，以下是一些最佳示例
-			</t-notice-bar>
+			<t-notice-bar :scrollable="false">卡片组件是由多个非常灵活的组件构成，以下是一些最佳示例</t-notice-bar>
 		</view>
 
 		<example customClass="mt-8" title="基础">
@@ -14,10 +12,8 @@
 				<t-card-body>
 					<t-card-title>{{ base.title }}</t-card-title>
 
-					<text class="text-sm" style="text-indent: 30rpx;">
-						{{ base.text }}
-					</text>
-					
+					<text class="text-sm" style="text-indent: 30rpx;">{{ base.text }}</text>
+
 					<t-card-action justify="end">
 						<t-btn color="primary" size="sm" outline>更多</t-btn>
 					</t-card-action>
@@ -34,9 +30,7 @@
 						<t-tag color="warning" size="xs" class="ml-2">经典</t-tag>
 					</t-card-title>
 
-					<text class="text-sm" style="text-indent:30rpx;">
-						{{ reversedCover.text }}
-					</text>
+					<text class="text-sm" style="text-indent:30rpx;">{{ reversedCover.text }}</text>
 
 					<t-card-action justify="end">
 						<t-btn color="warning" outline size="sm" class="mr-2">了解</t-btn>
@@ -53,11 +47,11 @@
 				<t-card-body>
 					<t-card-title>{{ embeddedCover.title }}</t-card-title>
 
-					<text class="text-sm" style="text-indent: 30rpx;">
-						{{ embeddedCover.text }}
-					</text>
+					<text class="text-sm" style="text-indent: 30rpx;">{{ embeddedCover.text }}</text>
 
-					<t-card-action justify="center"><t-btn color="accent" outline size="text-sm px-5">阅读</t-btn></t-card-action>
+					<t-card-action justify="center">
+						<t-btn color="accent" outline size="text-sm px-5">阅读</t-btn>
+					</t-card-action>
 				</t-card-body>
 			</t-card>
 		</example>
@@ -68,9 +62,7 @@
 				<t-card-body>
 					<t-card-title>{{ color.title }}</t-card-title>
 
-					<text class="text-sm" style="text-indent:30rpx;">
-						{{ color.text }}
-					</text>
+					<text class="text-sm" style="text-indent:30rpx;">{{ color.text }}</text>
 					<t-card-action justify="end">
 						<t-btn color="success" size="sm">开始阅读</t-btn>
 					</t-card-action>
@@ -82,9 +74,7 @@
 			<t-card size="w-68 ml-4">
 				<t-card-body>
 					<t-card-title>{{ notCover.title }}</t-card-title>
-					<text class="text-sm" style="text-indent:30rpx;">
-						{{ notCover.text }}
-					</text>
+					<text class="text-sm" style="text-indent:30rpx;">{{ notCover.text }}</text>
 
 					<t-card-action justify="center">
 						<t-btn color="primary" outline size="sm" class="mr-2">了解</t-btn>
@@ -97,13 +87,9 @@
 		<example title="无封面(颜色)">
 			<t-card size="w-68 ml-4" color="accent">
 				<t-card-body>
-					<t-card-title>
-						{{ notCoverButColor.title }}
-					</t-card-title>
+					<t-card-title>{{ notCoverButColor.title }}</t-card-title>
 
-					<text class="text-sm" style="text-indent:30rpx;">
-						{{ notCoverButColor.text }}
-					</text>
+					<text class="text-sm" style="text-indent:30rpx;">{{ notCoverButColor.text }}</text>
 
 					<t-card-action justify="center">
 						<t-btn color="neutral" outline size="sm" class="mr-2">了解</t-btn>
@@ -121,9 +107,7 @@
 				<t-card-body>
 					<t-card-title size="sm">{{ row.title }}</t-card-title>
 
-					<text class="text-sm" style="text-indent: 30rpx;">
-						{{ row.text }}
-					</text>
+					<text class="text-sm" style="text-indent: 30rpx;">{{ row.text }}</text>
 					<t-card-action justify="end" size="xs">
 						<t-btn color="warning" size="sm" outline>更多</t-btn>
 					</t-card-action>

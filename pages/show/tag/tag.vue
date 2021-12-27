@@ -46,7 +46,7 @@
 		</example>
 
 		<example title="可关闭">
-			<view class=" mx-1">
+			<view class="mx-1">
 				<t-tag closeable color="error" light class="m-2">关我</t-tag>
 			</view>
 		</example>

@@ -3,7 +3,7 @@
 		<t-nav-bar title="Cell" sticky />
 
 		<view class="bg-base bg-opacity-10 py-20">
-			<example title="基础" customClass="">
+			<example title="基础" customClass>
 				<t-cell title="单元格" value="内容" />
 				<t-cell title="单元格" value="内容" desc="描述信息" />
 			</example>
@@ -21,11 +21,11 @@
 					<template #left>
 						<view>
 							<t-icon type="alert" color="accent" class="mr-2" size="1.2em" />
-							<text class="border border-accent text-accent rounded px-2">单元格</text>
+							<text class="border border-accent rounded text-accent px-2">单元格</text>
 						</view>
 					</template>
 					<template #right>
-						<view class="bg-opacity-10 bg-error px-2 text-error rounded">99+</view>
+						<view class="bg-error rounded bg-opacity-10 text-error px-2">99+</view>
 					</template>
 				</t-cell>
 			</example>

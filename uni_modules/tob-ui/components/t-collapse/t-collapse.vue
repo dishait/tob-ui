@@ -1,5 +1,7 @@
 <template>
-	<view @click="$emit('click', $event)"><slot /></view>
+	<view @click="$emit('click', $event)">
+		<slot />
+	</view>
 </template>
 
 <script>
@@ -10,7 +12,7 @@ import { $P, Emits, VModel, ProvideEffects } from '../../core'
  * @tutorial TODO 文档
  *
  * @property {Boolean} border = [true|false] 边框，默认为false
- * @property {Boolean} accordion = [true|false] 手风琴模式，默认为false
+ * @property {Boolean} accordion = [true|false] 手风琴模式，默认为 false
  *
  * @event {Function} click 点击事件
  * @event {Function} change 变更事件

@@ -1,9 +1,13 @@
 <template>
 	<view class="img-container" :class="[Size, Loading, Rounded, Shadow, Status, Fail]">
-		<view class="img-loading-seat"><slot name="loading" v-if="loading"></slot></view>
+		<view class="img-loading-seat">
+			<slot name="loading" v-if="loading"></slot>
+		</view>
 
 		<view class="img-fail-seat" v-if="fail">
-			<slot name="fail"><t-icon type="file-image" size="1.8em" /></slot>
+			<slot name="fail">
+				<t-icon type="file-image" size="1.8em" />
+			</slot>
 		</view>
 
 		<image
@@ -16,7 +20,6 @@
 			:draggable="draggable"
 			:class="[Size, Rounded]"
 			:show-menu-by-longpress="showMenuByLongpress"
-			
 			@click="click"
 			@error="error"
 			@load="success"
@@ -33,21 +36,21 @@ import { $C, $P, Size, Emits, Shadow, Rounded } from '../../core'
  * @description 图片组件
  * @tutorial TODO 文档
  * @property {String} src 图片地址
- * @property {Boolean} webp = [true|false] 解析webp格式，默认为false不解析(微信小程序)
- * @property {Boolean} lazyLoad = [true|false] 懒加载，默认为false(微信小程序、百度小程序、字节跳动小程序、飞书小程序)
+ * @property {Boolean} webp = [true|false] 解析 webp 格式，默认为 false 不解析(微信小程序)
+ * @property {Boolean} lazyLoad = [true|false] 懒加载，默认为 false (微信小程序、百度小程序、字节跳动小程序、飞书小程序)
  *
- * @property {Boolean} showMenuByLongpress = [true|false] 开启长按图片显示识别小程序码菜单，默认为false(微信小程序)
+ * @property {Boolean} showMenuByLongpress = [true|false] 开启长按图片显示识别小程序码菜单，默认为 false (微信小程序)
  *
- * @property {Boolean} draggable = [true|false] 鼠标长按是否能拖动图片(微信小程序)
+ * @property {Boolean} draggable = [true|false] 鼠标长按是否能拖动图片(微信小程序)，默认为 false
  *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
  *  @value md 中
  * 	@value lg 大
  *
- * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为none
+ * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为 none
  *
  * 	@value none 无
  * 	@value sm 小
@@ -56,7 +59,7 @@ import { $C, $P, Size, Emits, Shadow, Rounded } from '../../core'
  * 	@value lg 大
  * 	@value xl 超大
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为base
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 none
  *
  * 	@value none 无
  * 	@value sm 小
@@ -68,12 +71,12 @@ import { $C, $P, Size, Emits, Shadow, Rounded } from '../../core'
  * 	@value 3xl 无敌大
  * 	@value full 圆
  *
- * @property {String} status = [online|offline|...] 尺寸，默认为空
+ * @property {String} status = [online|offline] 尺寸，默认为空
  *
  * 	@value online 在线
  * 	@value offline 离线
  *
- * @property {String} mode = [scaleToFill|aspectFit|aspectFill|widthFix|heightFix|top|bottom|center|left|right|top left|top right|bottom left|bottom right] 裁切模式，默认为scaleToFill
+ * @property {String} mode = [scaleToFill|aspectFit|aspectFill|widthFix|heightFix|top|bottom|center|left|right|top left|top right|bottom left|bottom right] 裁切模式，默认为 scaleToFill
  *
  * 	@value scaleToFill 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
  * 	@value aspectFit 保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来
@@ -153,7 +156,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-img {
 	.absolute;
 }
@@ -187,8 +190,7 @@ export default {
 	&-bg-color {
 		background-color: #f8f9fa;
 	}
-	
-	
+
 	// 状态
 	&-online::after,
 	&-offline::after {
@@ -197,7 +199,7 @@ export default {
 		.rounded-full;
 		top: 6%;
 		right: 6%;
-		content: '';
+		content: "";
 		width: 0.5em;
 		height: 0.5em;
 		box-shadow: 0 0 0 2px #ffffff;

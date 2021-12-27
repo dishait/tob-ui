@@ -7,22 +7,22 @@
 </template>
 
 <script>
-import { $C, $P, Emits, Color, bgColorPresets } from '../../core'
+import { $C, $P, Emits, bgColorPresets } from '../../core'
 
 let timeout
 const debounce = fn => {
-	return function(delay = 500) {
+	return function (delay = 500) {
 		clearTimeout(timeout)
 		timeout = setTimeout(fn.bind(this), delay)
 	}
 }
-	
+
 /**
  * Notify 消息通知
  * @description 消息通知组件
  * @tutorial TODO 文档
  *
- * @property {Number} zIndex = [98|99|100|101|...] 层级，默认为100
+ * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为100
  *
  * @event {Function} click 点击事件
  * @event {Function} change 变更事件
@@ -73,7 +73,7 @@ export default {
 			clearTimeout(timeout)
 		},
 		// 延迟隐藏
-		delayHidden: debounce(function() {
+		delayHidden: debounce(function () {
 			this.hidden()
 		}),
 		// 更新
@@ -90,7 +90,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-notify {
 	.flex;
 	.fixed;
@@ -100,20 +100,18 @@ export default {
 	.items-center;
 	.justify-center;
 
-	
 	/* #ifndef MP */
 	.top-0;
 	.statusbar;
 	height: 44px;
 	transform: translateY(-100%);
 	/* #endif */
-	
+
 	/* #ifdef MP */
 	.p-1;
 	transform: scale(1.2);
 	top: calc(48px + var(--status-bar-height));
 	/* #endif */
-	
 
 	will-change: transform;
 	transition: all 0.2s ease-in-out;

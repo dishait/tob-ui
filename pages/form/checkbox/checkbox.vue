@@ -11,8 +11,7 @@
 				</t-checkbox-group>
 			</view>
 		</example>
-		
-		
+
 		<example title="圆角">
 			<view class="ml-6">
 				<t-checkbox-group v-model="rounded">
@@ -22,8 +21,7 @@
 				</t-checkbox-group>
 			</view>
 		</example>
-		
-		
+
 		<example title="尺寸">
 			<view class="ml-6">
 				<t-checkbox-group v-model="size">
@@ -33,8 +31,7 @@
 				</t-checkbox-group>
 			</view>
 		</example>
-		
-		
+
 		<example title="禁用">
 			<view class="ml-6">
 				<t-checkbox-group v-model="abled">

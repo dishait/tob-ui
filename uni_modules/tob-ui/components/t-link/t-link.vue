@@ -1,5 +1,7 @@
 <template>
-	<view class="t-link" :class="[Color, Size, Focus]" @click="click"><slot /></view>
+	<view class="t-link" :class="[Color, Size, Focus]" @click="click">
+		<slot />
+	</view>
 </template>
 
 <script>
@@ -8,7 +10,7 @@ import { $P, $C, Size, Color, textColorPresets } from '../../core'
  * Link 链接
  * @description 链接组件
  * @tutorial TODO 文档
- * @property {String} to = [/pages/|...]跳转，只允许navigateTo
+ * @property {String} to = [/pages/|....]跳转，只允许navigateTo
  * @property {String} color = [primary|secondary|accent|neutral|base|info|success|warning|error|...] 颜色，默认为空
  *
  * 	@value primary 主要
@@ -22,7 +24,7 @@ import { $P, $C, Size, Color, textColorPresets } from '../../core'
  * 	@value warning 警告
  * 	@value error 错误
  * 
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -69,7 +71,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-link {
 	.inline-block;
 	/* #ifdef H5 */

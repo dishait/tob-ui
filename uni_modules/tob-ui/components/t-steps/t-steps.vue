@@ -1,5 +1,7 @@
 <template>
-	<view class="t-steps" @click="click"><slot /></view>
+	<view class="t-steps" @click="click">
+		<slot />
+	</view>
 </template>
 
 <script>
@@ -15,9 +17,9 @@ const presetColors = createColorPresets('step')
  *
  * @property {Number} current 当前进度，默认为0
  * 
- * @property {Boolean} fail = [true|false] 是否失败，默认为false
+ * @property {Boolean} fail = [true|false] 是否失败，默认为 false
  *
- * @property {String} successColor = [primary|secondary|accent|neutral|info|success|warning|error] 成功颜色，默认为success
+ * @property {String} successColor = [primary|secondary|accent|neutral|info|success|warning|error] 成功颜色，默认为 success
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -30,7 +32,7 @@ const presetColors = createColorPresets('step')
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} failColor = [primary|secondary|accent|neutral|info|success|warning|error] 失败颜色，默认为error
+ * @property {String} failColor = [primary|secondary|accent|neutral|info|success|warning|error] 失败颜色，默认为 error
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -130,7 +132,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">	
+<style scoped lang="less">
 .t-steps {
 	display: grid;
 	grid-auto-flow: column;

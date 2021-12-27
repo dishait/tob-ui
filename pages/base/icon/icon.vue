@@ -13,9 +13,13 @@
 			</t-notice-bar>
 		</view>
 
-		<t-grid gutter="30rpx" v-show="!fillVisible"><t-grid-item v-for="v of origin" :key="v" :icon="v" :text="v.split('-')[0]" /></t-grid>
+		<t-grid gutter="30rpx" v-show="!fillVisible">
+			<t-grid-item v-for="v of origin" :key="v" :icon="v" :text="v.split('-')[0]" />
+		</t-grid>
 
-		<t-grid gutter="30rpx" v-show="fillVisible"><t-grid-item v-for="v of fill" :key="v" :icon="v" :text="v.split('-')[0]" /></t-grid>
+		<t-grid gutter="30rpx" v-show="fillVisible">
+			<t-grid-item v-for="v of fill" :key="v" :icon="v" :text="v.split('-')[0]" />
+		</t-grid>
 	</view>
 </template>
 

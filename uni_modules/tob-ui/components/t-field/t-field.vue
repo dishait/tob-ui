@@ -3,7 +3,7 @@
 		<view class="field-label">
 			<t-icon :type="labelIcon" v-if="labelIcon" class="mr-1" />
 			<text>{{ label }}</text>
-			<text class="text-error" v-if="required"> *</text>
+			<text class="text-error" v-if="required">*</text>
 		</view>
 
 		<view class="field-input">
@@ -29,7 +29,7 @@ import { $P, $C, $T, Emits, Flex } from '../../core'
  * 	@value onBlur 失焦时校验
  * 	@value onChange 变更时校验
  *
- * @property {String} align = [start|center|end|baseline|stretch|...] 交叉轴对齐方式，默认为 start 填充整个容器高度
+ * @property {String} align = [start|center|end|baseline|stretch|...] 交叉轴对齐方式，默认为 start
  *
  *  @value start 头部
  * 	@value end 尾部
@@ -62,7 +62,7 @@ export default {
 				this.FormValidate(this.name)
 			}
 		}
-		
+
 		return {
 			FieldTrack: track
 		}
@@ -99,7 +99,7 @@ export default {
 </script>
 
 <style lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 
 // 默认样式
 .t-field {
@@ -127,12 +127,12 @@ export default {
 	.opacity-0;
 	.text-error;
 	transition: opacity 0.2s ease-in-out;
-	
+
 	// 需要特殊处理的textarea
 	&-textarea {
 		.mt-4;
 	}
-	
+
 	&-show {
 		.opacity-100;
 	}

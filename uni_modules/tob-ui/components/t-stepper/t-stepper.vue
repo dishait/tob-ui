@@ -1,6 +1,10 @@
 <template>
 	<view class="t-stepper" @click="click">
-		<text class="stepper-action" @click="decrease" :class="[Disabled, DecreaseDisabled, Color, Rounded, Shadow, Size]">-</text>
+		<text
+			class="stepper-action"
+			@click="decrease"
+			:class="[Disabled, DecreaseDisabled, Color, Rounded, Shadow, Size]"
+		>-</text>
 		<input
 			type="number"
 			v-model="temp"
@@ -8,17 +12,20 @@
 			:disabled="disabled"
 			class="stepper-input"
 			:class="[Disabled, Color, Rounded, Shadow, Size]"
-			
 			@blur="blur"
 			@input="change"
 			@confirm="confirm"
 		/>
-		<text class="stepper-action" @click="increase" :class="[Disabled, IncreaseDisabled, Color, Rounded, Shadow, Size]">+</text>
+		<text
+			class="stepper-action"
+			@click="increase"
+			:class="[Disabled, IncreaseDisabled, Color, Rounded, Shadow, Size]"
+		>+</text>
 	</view>
 </template>
 
 <script>
-import { $P, $C, VModel, Rounded, Shadow, Emits, Color, Size } from "../../core" 
+import { $P, $C, VModel, Rounded, Shadow, Emits, Color, Size } from "../../core"
 
 import { FieldTrack } from "../t-field/mixin"
 /**
@@ -26,15 +33,15 @@ import { FieldTrack } from "../t-field/mixin"
  * @description 步进器组件
  * @tutorial TODO 文档
  *
- * @property {Number} step 步长，默认为1
- * @property {Boolean} integer 只允许整数
- * @property {Number} max 最大值，默认为10000
- * @property {Number} min 最小值，默认为-10000
- * @property {Boolean} disabled 禁用，默认为false
- * @property {String} inputWidth 输入框宽度，默认为50rpx
+ * @property {Number} step 步长，默认为 1
+ * @property {Number} max 最大值，默认为 10000
+ * @property {Number} min 最小值，默认为 -10000
+ * @property {Boolean} disabled 禁用，默认为 false
+ * @property {String} inputWidth 输入框宽度，默认为 50rpx
+ * @property {Boolean} integer = [true|false] 只允许整数，默认为 false
  * 
- * @property {Boolean} light = [true|false] 高亮，默认为false
- * @property {Boolean} outline = [true|false] 轮廓，默认为false
+ * @property {Boolean} light = [true|false] 高亮，默认为 false
+ * @property {Boolean} outline = [true|false] 轮廓，默认为 false
  * 
  * @property {String} color = [primary|secondary|accent|neutral|base|ghost|info|success|warning|error|...] 颜色，默认为 base 
  *
@@ -49,7 +56,7 @@ import { FieldTrack } from "../t-field/mixin"
  * 	@value warning 警告
  * 	@value error 错误
  * 
- * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为none
+ * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为 none
  *
  * 	@value none 无
  * 	@value sm 小
@@ -58,7 +65,7 @@ import { FieldTrack } from "../t-field/mixin"
  * 	@value lg 大
  * 	@value xl 超大
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为base
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 base
  *
  * 	@value none 无
  * 	@value sm 小
@@ -70,7 +77,7 @@ import { FieldTrack } from "../t-field/mixin"
  * 	@value 3xl 无敌大
  * 	@value full 圆
  * 
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
@@ -170,7 +177,7 @@ export default {
 			this.$nextTick(() => {
 				this.updateTemp(v)
 			})
-			
+
 			this.FieldTrack({ value: v, trigger: 'onBlur' })
 			this.$emit('blur', e)
 		},
@@ -181,7 +188,7 @@ export default {
 			if (shouldParseInt) {
 				v = parseInt(v)
 			}
-			
+
 			if (this.increaseDisabled && v > this.max) {
 				v = this.max
 			}
@@ -198,7 +205,7 @@ export default {
 			if (abled) {
 				const useCount = this.useFormatCount(this.temp, this.step)
 				const v = useCount((left, right) => left + right)
-				
+
 				this.updateVModelValue(v)
 			}
 		},
@@ -239,7 +246,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-stepper {
 	.flex;
 	.text-center;
@@ -256,7 +263,7 @@ export default {
 		.text-white;
 		.bg-opacity-100;
 	}
-	
+
 	&.stepper {
 		// 主要
 		&-primary {
@@ -311,7 +318,7 @@ export default {
 		/* #ifdef H5 */
 		.cursor-pointer;
 		/* #endif */
-		
+
 		transition: all 0.12s ease-in-out;
 		&:active {
 			.stepper-active();

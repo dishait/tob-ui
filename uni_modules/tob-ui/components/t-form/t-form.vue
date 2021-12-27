@@ -1,5 +1,7 @@
 <template>
-	<view @click="click"><slot /></view>
+	<view @click="click">
+		<slot />
+	</view>
 </template>
 
 <script>
@@ -12,7 +14,7 @@ const { is, not } = $T.types
  * @description 表单组件
  * @tutorial TODO 文档
  *
- * @property {String} validateTrigger = [onBlur|onChange|manual] 校验时机，默认走表单校验时机
+ * @property {String} validateTrigger = [onBlur|onChange|manual] 校验时机，默认为 onBlur
  *
  * 	@value manual 手动校验
  * 	@value onBlur 失焦时校验
@@ -38,6 +40,7 @@ export default {
 	},
 	data() {
 		return {
+			status: 'init',
 			fields: {}, // 域集
 			rules: [] // 规则集
 		}
@@ -49,6 +52,7 @@ export default {
 		},
 		// 校验所有规则
 		async validateAll(rules = this.rules) {
+			this.status = 'pending'
 			const finalResult = {}
 			const willValidates = []
 			for (let fieldName in this.fields) {
@@ -61,7 +65,7 @@ export default {
 				const { name, ...result } = v
 				finalResult[name] = result
 			})
-			return finalResult
+			return { fields: finalResult, status: this.status }
 		},
 		// 校验单条规则
 		async validate(fieldName, rule = this.rules[fieldName]) {
@@ -90,18 +94,19 @@ export default {
 						throw new Error(result)
 					}
 				} catch (err) {
-					return this.fail(useField, fieldName, err.message)
+					return this.fail(useField, fieldName, field.value, err.message)
 				}
 			}
 			return this.success(useField, fieldName, field.value)
 		},
 		// 失败时处理
-		fail(useField, fieldName, errorMsg) {
+		fail(useField, fieldName, value, errorMsg) {
+			this.status = 'fail'
 			const { type } = useField(errorMsg)
 			const result = {
 				name: fieldName,
 				type,
-				value: null,
+				value,
 				status: 'fail',
 				errorMsg
 			}
@@ -110,6 +115,9 @@ export default {
 		},
 		// 成功时处理
 		success(useField, fieldName, value) {
+			if (this.status !== 'fail') {
+				this.status = 'success'
+			}
 			const { type } = useField('')
 			return {
 				name: fieldName,

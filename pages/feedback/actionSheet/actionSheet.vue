@@ -3,7 +3,7 @@
 		<t-nav-bar title="ActionSheet" sticky />
 
 		<view class="bg-base bg-opacity-10 py-8 pb-20">
-			<example title="基础" customClass="">
+			<example title="基础" customClass=" ">
 				<t-cell-group inset="mx-3" rounded="lg">
 					<t-cell title="基础用法" value="😁" @click="open('base')" />
 					<t-cell title="展示取消" value="😀" @click="open('cancel')" />

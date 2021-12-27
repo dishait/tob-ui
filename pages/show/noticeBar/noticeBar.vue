@@ -7,7 +7,8 @@
 		</example>
 
 		<example title="高亮">
-			<t-notice-bar>盛年不重来，一日难再晨。及时宜自勉，岁月不待人</t-notice-bar>			</example>
+			<t-notice-bar>盛年不重来，一日难再晨。及时宜自勉，岁月不待人</t-notice-bar>
+		</example>
 
 		<example title="轮廓">
 			<t-notice-bar outline>盛年不重来，一日难再晨。及时宜自勉，岁月不待人</t-notice-bar>
@@ -21,25 +22,19 @@
 
 		<example title="阴影">
 			<view class="mx-2">
-				<t-notice-bar rounded="md" color="" shadow="sm">
-					一寸光阴一寸金，寸金难买寸光阴
-				</t-notice-bar>
+				<t-notice-bar rounded="md" color shadow="sm">一寸光阴一寸金，寸金难买寸光阴</t-notice-bar>
 			</view>
 		</example>
 
 		<example title="尺寸">
 			<view class="mx-2">
-				<t-notice-bar rounded="md" color="accent" size="xs">
-					选择机会，就是节省时间
-				</t-notice-bar>
+				<t-notice-bar rounded="md" color="accent" size="xs">选择机会，就是节省时间</t-notice-bar>
 			</view>
 		</example>
 
 		<example title="可关闭">
 			<view class="mx-2">
-				<t-notice-bar rounded="md" color="info" closeable>
-					读书破万卷，下笔如有神
-				</t-notice-bar>
+				<t-notice-bar rounded="md" color="info" closeable>读书破万卷，下笔如有神</t-notice-bar>
 			</view>
 		</example>
 
@@ -59,14 +54,18 @@
 				</t-notice-bar>
 			</view>
 		</example>
-		
+
 		<example title="静止">
 			<view class="mx-2">
-				<t-notice-bar color="base" :scrollable="false" rounded="md" leftIcon="notification">独怜幽草涧边生，上有黄鹂深树鸣</t-notice-bar>
+				<t-notice-bar
+					color="base"
+					:scrollable="false"
+					rounded="md"
+					leftIcon="notification"
+				>独怜幽草涧边生，上有黄鹂深树鸣</t-notice-bar>
 			</view>
 		</example>
 
-		
 		<example title="横向步进">
 			<view class="mx-2">
 				<t-notice-bar color="warning" rounded="md" leftIcon="info-circle" closeable :scrollable="false">

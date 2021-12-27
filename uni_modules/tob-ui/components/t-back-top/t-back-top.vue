@@ -1,5 +1,12 @@
 <template>
-	<view class="t-back-top" :class="[Color, Rounded, Shadow, Size, Visible]" :style="{ right, bottom }" @click="click"><t-icon :type="icon" /></view>
+	<view
+		@click="click"
+		class="t-back-top"
+		:style="{ right, bottom }"
+		:class="[Color, Rounded, Shadow, Size, Visible]"
+	>
+		<t-icon :type="icon" />
+	</view>
 </template>
 
 <script>
@@ -19,21 +26,21 @@ uni.useBackTopMixin = (topBounds = 50) => {
  * @description 回到顶部组件
  * @tutorial TODO 文档
  *
- * @property {String} right = [50rpx] 右边，默认为50rpx
- * @property {Boolean} light = [true|false] 亮色，默认为false
- * @property {Boolean} outline = [true|false] 轮廓，默认为false
- * @property {String} icon = [arrowup|totop|caret-up|...] 类型，默认为caret-up
+ * @property {String} right = [50rpx|....] 右边，默认为 50rpx
+ * @property {Boolean} light = [true|false] 亮色，默认为 false
+ * @property {Boolean} outline = [true|false] 轮廓，默认为 false
+ * @property {String} icon = [arrowup|totop|caret-up|....] 图标，默认为 caret-up
  *
- * @property {String} bottom = [50rpx|calc(50rpx + 50px)|...] 底部，默认为50rpx，h5的tabbar页面请再加50px，即calc(50rpx + 50px)
+ * @property {String} bottom = [50rpx|calc(50rpx + 50px)|....] 底部，默认为 50rpx，h5 的 tabbar 页面请再加 50px，即 calc(50rpx + 50px)
  *
- * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为md
+ * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
  *  @value md 中
  * 	@value lg 大
  *
- * @property {String} color = [primary|secondary|accent|neutral|base|info|success|warning|error|...] 类型，默认为空，白底黑字
+ * @property {String} color = [primary|secondary|accent|neutral|base|info|success|warning|error|...] 类型，默认为空
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -46,7 +53,7 @@ uni.useBackTopMixin = (topBounds = 50) => {
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} shadow = [sm|base|md|lg|xl|...] 类型，默认为sm
+ * @property {String} shadow = [sm|base|md|lg|xl|...] 类型，默认为 sm
  *
  * 	@value sm 小
  * 	@value base 基础
@@ -54,7 +61,7 @@ uni.useBackTopMixin = (topBounds = 50) => {
  * 	@value lg 大
  * 	@value xl 超大
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为full，圆
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 full
  *
  * 	@value none 无
  * 	@value sm 小
@@ -134,7 +141,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) '../../index.less';
+@import (reference, less) "../../index.less";
 .t-back-top {
 	.fixed;
 	.opacity-0;

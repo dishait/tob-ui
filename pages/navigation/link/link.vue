@@ -7,13 +7,13 @@
 				<t-link :color="v.type">{{ v.desc }}链接</t-link>
 			</view>
 		</example>
-		
+
 		<example title="尺寸">
 			<view v-for="v of sizes" class="mt-2 ml-5" :key="v.type">
 				<t-link :size="v.type">{{ v.desc }}链接</t-link>
 			</view>
 		</example>
-		
+
 		<example title="跳转">
 			<view class="mt-2 ml-5">
 				<t-link color="base" to="/pages/base/button/button">前往 Button 页</t-link>
