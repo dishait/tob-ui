@@ -48,9 +48,9 @@ export default {
 	methods: {
 		go(v) {
 			const routes = {
+				Btn: '/pages/base/btn/btn',
 				Img: '/pages/base/img/img',
 				Cell: '/pages/base/cell/cell',
-				Btn: '/pages/base/button/button',
 			}
 
 			uni.navigateTo({

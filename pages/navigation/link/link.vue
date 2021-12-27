@@ -16,7 +16,7 @@
 
 		<example title="跳转">
 			<view class="mt-2 ml-5">
-				<t-link color="base" to="/pages/base/button/button">前往 Button 页</t-link>
+				<t-link color="base" to="/pages/base/btn/btn">前往 Button 页</t-link>
 			</view>
 		</example>
 	</view>

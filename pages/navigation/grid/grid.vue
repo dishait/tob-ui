@@ -91,7 +91,7 @@
 		<example title="跳转">
 			<view class="mx-2">
 				<t-grid>
-					<t-grid-item color="base" to="/pages/base/button/button" icon="experiment" text="btn页" />
+					<t-grid-item color="base" to="/pages/base/btn/btn" icon="experiment" text="btn页" />
 				</t-grid>
 			</view>
 		</example>

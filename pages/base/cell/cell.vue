@@ -2,8 +2,8 @@
 	<view>
 		<t-nav-bar title="Cell" sticky />
 
-		<view class="bg-base bg-opacity-10 py-20">
-			<example title="基础" customClass>
+		<view class="bg-base bg-opacity-10 pb-20 pt-10">
+			<example title="基础" customClass=" ">
 				<t-cell title="单元格" value="内容" />
 				<t-cell title="单元格" value="内容" desc="描述信息" />
 			</example>
@@ -41,7 +41,7 @@
 			</example>
 
 			<example title="跳转">
-				<t-cell title="按钮页" value="前往" rightIcon="right" to="/pages/base/button/button" />
+				<t-cell title="按钮页" value="前往" rightIcon="right" to="/pages/base/btn/btn" />
 			</example>
 
 			<example title="卡片">
