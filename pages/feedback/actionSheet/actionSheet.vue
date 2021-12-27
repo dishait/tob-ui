@@ -7,7 +7,7 @@
 				<t-cell-group inset="mx-3" rounded="lg">
 					<t-cell title="基础用法" value="😁" @click="open('base')" />
 					<t-cell title="展示取消" value="😀" @click="open('cancel')" />
-					<t-cell title="展示描述信息" value="😀" @click="open('desc')" />
+					<t-cell title="展示描述信息" value="😄" @click="open('desc')" />
 				</t-cell-group>
 			</example>
 

@@ -178,6 +178,7 @@ export default {
 <style scoped lang="less">
 @import (reference, less) "../../index.less";
 @import (reference, less) "../../core/tool.less";
+
 .t-popup {
 	.relative;
 	.bg-white;

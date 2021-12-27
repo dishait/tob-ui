@@ -3,7 +3,7 @@
 		<t-nav-bar title="Popup" sticky />
 
 		<view class="bg-base h-screen bg-opacity-10 pt-8 pb-20">
-			<example title="弹出位置" customClass>
+			<example title="弹出位置" customClass=" ">
 				<t-cell-group inset="mx-3" rounded="lg">
 					<t-cell title="居中" value="😃" @click="open('center')" />
 					<t-cell title="左侧" value="👉" @click="open('left')" />

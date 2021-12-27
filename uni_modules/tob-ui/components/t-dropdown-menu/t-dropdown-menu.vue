@@ -197,6 +197,7 @@ export default {
 <style scoped lang="less">
 @import (reference, less) "../../index.less";
 @import (reference, less) "../../core/tool.less";
+
 .t-dropdown-menu {
 	.relative;
 }
@@ -259,7 +260,6 @@ export default {
 		}
 	}
 
-	// 蒙版
 	.ProvideMask();
 }
 </style>

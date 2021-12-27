@@ -22,7 +22,7 @@
 
 		<example title="阴影">
 			<view class="mx-2">
-				<t-notice-bar rounded="md" color shadow="sm">一寸光阴一寸金，寸金难买寸光阴</t-notice-bar>
+				<t-notice-bar rounded="md" color=" " shadow="sm">一寸光阴一寸金，寸金难买寸光阴</t-notice-bar>
 			</view>
 		</example>
 

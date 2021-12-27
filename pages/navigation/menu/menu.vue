@@ -87,7 +87,7 @@
 
 		<example title="横排">
 			<view class="ml-5">
-				<t-menu size rounded="xl" horizontal v-model="horizontal">
+				<t-menu size=" " rounded="xl" horizontal v-model="horizontal">
 					<t-menu-item name="1">内容A</t-menu-item>
 					<t-menu-item name="2">内容B</t-menu-item>
 					<t-menu-item name="3">内容C</t-menu-item>
@@ -98,7 +98,7 @@
 		<example title="纯图标">
 			<view class="flex">
 				<view class="ml-5">
-					<t-menu size rounded="xl" v-model="onlyIcon">
+					<t-menu size=" " rounded="xl" v-model="onlyIcon">
 						<t-menu-item name="1" icon="eye" />
 						<t-menu-item name="2" icon="code" />
 						<t-menu-item name="3" icon="folder" />
@@ -106,7 +106,7 @@
 				</view>
 
 				<view class="ml-10">
-					<t-menu size rounded="xl" horizontal v-model="onlyIcon">
+					<t-menu size=" " rounded="xl" horizontal v-model="onlyIcon">
 						<t-menu-item name="1" icon="eye" />
 						<t-menu-item name="2" icon="code" />
 						<t-menu-item name="3" icon="folder" />
