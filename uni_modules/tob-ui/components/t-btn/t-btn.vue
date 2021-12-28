@@ -3,7 +3,7 @@
 		<button
 			class="t-btn"
 			:lang="lang"
-			hover-class
+			hover-class=" "
 			:loading="loading"
 			:disabled="disabled"
 			:open-type="openType"
