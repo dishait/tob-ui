@@ -118,28 +118,33 @@
 </template>
 
 <script>
+import first from "@/static/card/first.jpeg"
+import second from "@/static/card/second.jpg"
+import third from "@/static/card/third.jpeg"
+import fourth from "@/static/card/fourth.jpeg"
+import fifth from "@/static/card/fifth.jpeg"
 export default {
 	data() {
 		return {
 			base: {
 				title: '寒风吹彻',
-				src: 'https://images.pexels.com/photos/2034286/pexels-photo-2034286.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+				src: first,
 				text:
 					'雪落在那些年雪落过的地方，我已经不注意它们了。比落雪更重要的事情开始降临到生活中。三十岁的我，似乎对这个冬天的来临漠不关心，却又好像一直在倾听落雪的声音，期待着又一场雪悄无声息地覆盖村庄和田野...'
 			},
 			reversedCover: {
 				title: '骆驼祥子',
-				src: 'https://images.pexels.com/photos/4456133/pexels-photo-4456133.png?auto=compress&cs=tinysrgb&dpr=2&w=500',
+				src: second,
 				text: '这个银白色的世界，没有他坐下的地方，也没有他的去处；白茫茫的一片，只有饿着肚子的小鸟，与走头无路的人，知道什么叫做哀叹。'
 			},
 			embeddedCover: {
 				title: '带上她的眼睛',
-				src: 'https://images.pexels.com/photos/3286807/pexels-photo-3286807.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+				src: third,
 				text: '不得不承认，在过去的一天一夜里，她教会了我某种东西，一种说不清的东西，像月夜中草原上的光影一样朦胧，由于它，以后在我眼中的世界与以前会有所不同。'
 			},
 			color: {
 				title: '我与地坛',
-				src: 'https://images.pexels.com/photos/9790711/pexels-photo-9790711.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+				src: fourth,
 				text: '大树下，破碎的阳光星星点点，风把遍地的小灯笼吹得滚动，仿佛暗哑地响着无数小铃挡。'
 			},
 			notCover: {
@@ -152,7 +157,7 @@ export default {
 			},
 			row: {
 				title: '秋夜',
-				src: 'https://images.pexels.com/photos/1590551/pexels-photo-1590551.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+				src: fifth,
 				text: '我家有两颗树,一颗是枣树,另一颗还是枣树'
 			}
 		}

@@ -1,10 +1,6 @@
 <template>
 	<view class="t-stepper" @click="click">
-		<text
-			class="stepper-action"
-			@click="decrease"
-			:class="[Disabled, DecreaseDisabled, Color, Rounded, Shadow, Size]"
-		>-</text>
+		<text class="stepper-action" @click="decrease" :class="[Disabled, DecreaseDisabled, Color, Rounded, Shadow, Size]">-</text>
 		<input
 			type="number"
 			v-model="temp"
@@ -16,18 +12,14 @@
 			@input="change"
 			@confirm="confirm"
 		/>
-		<text
-			class="stepper-action"
-			@click="increase"
-			:class="[Disabled, IncreaseDisabled, Color, Rounded, Shadow, Size]"
-		>+</text>
+		<text class="stepper-action" @click="increase" :class="[Disabled, IncreaseDisabled, Color, Rounded, Shadow, Size]">+</text>
 	</view>
 </template>
 
 <script>
-import { $P, $C, VModel, Rounded, Shadow, Emits, Color, Size } from "../../core"
+import { $P, $C, VModel, Rounded, Shadow, Emits, Color, Size } from '../../core'
 
-import { FieldTrack } from "../t-field/mixin"
+import { FieldTrack } from '../t-field/mixin'
 /**
  * Stepper 步进器
  * @description 步进器组件
@@ -39,11 +31,11 @@ import { FieldTrack } from "../t-field/mixin"
  * @property {Boolean} disabled 禁用，默认为 false
  * @property {String} inputWidth 输入框宽度，默认为 50rpx
  * @property {Boolean} integer = [true|false] 只允许整数，默认为 false
- * 
+ *
  * @property {Boolean} light = [true|false] 高亮，默认为 false
  * @property {Boolean} outline = [true|false] 轮廓，默认为 false
- * 
- * @property {String} color = [primary|secondary|accent|neutral|base|ghost|info|success|warning|error|...] 颜色，默认为 base 
+ *
+ * @property {String} color = [primary|secondary|accent|neutral|base|ghost|info|success|warning|error|...] 颜色，默认为 base
  *
  * 	@value primary 主要
  * 	@value secondary 次要
@@ -55,7 +47,7 @@ import { FieldTrack } from "../t-field/mixin"
  * 	@value success 成功
  * 	@value warning 警告
  * 	@value error 错误
- * 
+ *
  * @property {String} shadow = [none|sm|base|md|lg|xl|...] 阴影，默认为 none
  *
  * 	@value none 无
@@ -76,14 +68,14 @@ import { FieldTrack } from "../t-field/mixin"
  * 	@value 2xl 超级大
  * 	@value 3xl 无敌大
  * 	@value full 圆
- * 
+ *
  * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *
  * 	@value xs 超小
  * 	@value sm 小
  *  @value md 中
  * 	@value lg 大
- * 
+ *
  * @event {Function} blur 失焦事件
  * @event {Function} click 点击事件
  * @event {Function} change 变更事件
@@ -103,14 +95,14 @@ export default {
 				xs: 'w-4 h-4 text-xs',
 				sm: 'w-5 h-5 text-sm',
 				md: 'w-6 h-6 text-md',
-				lg: 'w-7 h-7 text-lg',
+				lg: 'w-7 h-7 text-lg'
 			}
 		})
 	],
 	emits: [
 		'blur', // 失焦事件
 		'change', // 变更事件
-		'confirm', // 确认事件
+		'confirm' // 确认事件
 	],
 	props: $P({
 		step: 1, // 步长
@@ -246,7 +238,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import (reference, less) "../../index.less";
+@import (reference, less) '../../index.less';
 .t-stepper {
 	.flex;
 	.text-center;

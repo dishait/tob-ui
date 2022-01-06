@@ -2,26 +2,10 @@
 	<view class="pb-20">
 		<t-nav-bar title="Stepper" sticky />
 
-		<example title="原色" customClass="mt-8">
-			<view class="ml-6">
-				<view class="mt-3" v-for="v in colors" :key="v.type">
-					<t-stepper v-model="color" :color="v.type" :light="false">{{ v.content }}</t-stepper>
-				</view>
-			</view>
-		</example>
-
-		<example title="高亮(默认)">
+		<example title="颜色" customClass="mt-6">
 			<view class="ml-6">
 				<view class="mt-3" v-for="v in colors" :key="v.type">
 					<t-stepper v-model="light" :color="v.type">{{ v.content }}</t-stepper>
-				</view>
-			</view>
-		</example>
-
-		<example title="轮廓">
-			<view class="ml-6">
-				<view class="mt-3" v-for="v in colors" :key="v.type">
-					<t-stepper v-model="outline" outline :color="v.type">{{ v.content }}</t-stepper>
 				</view>
 			</view>
 		</example>

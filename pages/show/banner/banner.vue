@@ -27,21 +27,24 @@
 </template>
 
 <script>
+import first from "@/static/banner/first.jpeg"
+import second from "@/static/banner/second.jpeg"
+import third from "@/static/banner/third.jpeg"
 export default {
 	data() {
 		return {
 			list: [
 				{
 					name: '1',
-					url: 'https://images.pexels.com/photos/10080749/pexels-photo-10080749.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
+					url: first
 				},
 				{
 					name: '2',
-					url: 'https://images.pexels.com/photos/10043934/pexels-photo-10043934.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
+					url: second
 				},
 				{
 					name: '3',
-					url: 'https://images.pexels.com/photos/10043933/pexels-photo-10043933.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
+					url: third
 				}
 			]
 		}

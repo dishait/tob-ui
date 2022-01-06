@@ -1,11 +1,11 @@
 <template>
 	<view class="pb-20">
 		<view class="title">
-			<t-icon type="fire" class="mr-1" />
+			<t-icon type="fire" size="0.9em" class="mr-1" />
 			<text>TOB UI</text>
 		</view>
 
-		<view class="m-4 mt-6">
+		<view class="m-4 mt-8">
 			<text class="type">Base</text>
 			<view class="container">
 				<view class="item" v-for="v of base" :key="v.name" @click="go('base', v.name)">
@@ -116,11 +116,11 @@ export default {
 .title {
 	.p-1;
 	.ml-1;
-	.mt-1;
+	.mt-6;
 	.text-3xl;
 	.statusbar;
-	.font-bold;
 	.text-primary;
+	.font-semibold;
 }
 
 .type {

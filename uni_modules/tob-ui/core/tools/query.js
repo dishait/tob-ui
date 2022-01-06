@@ -1,6 +1,6 @@
 // 避免被tree shaking掉
 // #ifdef VUE3
-const query= uni.createSelectorQuery()
+const query = vm => uni.createSelectorQuery().in(vm)
 // #endif
 
 /**
@@ -13,9 +13,9 @@ export default (vm, selector, more = false) => {
 		// #ifdef VUE2
 		const ql = uni.createSelectorQuery().in(vm)[method](selector)
 		// #endif
-		
+
 		// #ifdef VUE3
-		const ql = query.in(vm)[method](selector)
+		const ql = query(vm)[method](selector)
 		// #endif
 		ql.boundingClientRect(rect => resolve(rect)).exec()
 	}
