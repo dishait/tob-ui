@@ -10,10 +10,11 @@
 
 <script>
 import { Emits, InjectCounter, InjectEffects } from '../../core'
+
 /**
  * Steps 步骤条项
  * @description 步骤条项组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/steps.html
  *
  * @event {Function} click 点击事件
  */

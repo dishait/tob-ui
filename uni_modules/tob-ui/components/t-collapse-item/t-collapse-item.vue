@@ -18,10 +18,11 @@
 
 <script>
 import { $P, $M, $C, $T, InjectEffects } from '../../core'
+
 /**
  * CollapseItem 折叠面板项
  * @description 折叠面板项组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/collapse.html
  *
  * @property {String} title 标题
  * @property {String} name 选中标识，必填

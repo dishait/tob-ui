@@ -4,10 +4,11 @@
 
 <script>
 import { Emits } from "../../core"
+
 /**
  * SubMenu 子菜单
  * @description 子菜单组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/navigation/menu.html
  *
  * @event {Function} click 点击事件
  */

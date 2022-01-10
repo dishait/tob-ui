@@ -19,7 +19,8 @@ import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
 /**
  * Tag 标签
  * @description 标签组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/tag.html
+ * 
  * @property {String} leftIcon 左侧图标
  * @property {String} rightIcon 右侧图标
  * @property {Boolean} light = [true|false] 高亮，默认为false

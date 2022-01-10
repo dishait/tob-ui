@@ -25,10 +25,11 @@
 
 <script>
 import { $P, $C, Emits, VModel, Rounded } from '../../core'
+
 /**
  * ActionSheet 动作面板
  * @description 动作面板组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/feedback/actionSheet.html
  *
  * @property {String} desc 描述，位于面板头部
  * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为100

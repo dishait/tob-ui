@@ -10,7 +10,7 @@ import { $P, $C, Emits } from '../../core'
 /**
  * Grid 宫格
  * @description 宫格组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/navigation/grid.html
  *
  * @property {Number} column = [3|4|5|6|....] 列数，默认为 4 列
  * @property {String} gutter = [5rpx|10rpx|20rpx|....] 间隔，默认为 10rpx

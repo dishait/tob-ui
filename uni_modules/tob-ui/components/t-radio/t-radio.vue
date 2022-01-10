@@ -11,7 +11,7 @@ import { $P, $C, $M, Color, Size, Rounded, InjectEffects, createColorPresets } f
 /**
  * Radio 单选框
  * @description 单选框组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/radio.html
  *
  * @property {Boolean} disabled = [true|false] 禁用
  * @property {String} value 标识，会被 t-radio-group 记录

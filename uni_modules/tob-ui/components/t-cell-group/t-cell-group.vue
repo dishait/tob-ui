@@ -9,10 +9,12 @@
 
 <script>
 import { $P, $C, Emits, Rounded } from '../../core/index.js'
+
 /**
- * 单元格组
+ * CellGroup 单元格组
  * @description 单元格组组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/base/cell.html
+ * 
  * @property {String} title 标题
  * @property {Boolean} inset = [mx-1|mx-2|mx-3|mx-4|mx-5|...] 插入
  *

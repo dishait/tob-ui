@@ -41,10 +41,11 @@
 import tIcon from '../t-icon/t-icon.vue'
 import { FieldTrack } from '../t-field/mixin'
 import { $P, $C, Color, createColorPresets, Emits, VModel, Size, Rounded } from '../../core'
+
 /**
  * Input 输入框
  * @description 输入框组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/input.html
  *
  * @property {String} placeholder 占位符
  * @property {Number} maxlength 最大长度，默认为 -1, 无限长

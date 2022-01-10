@@ -7,10 +7,12 @@
 
 <script>
 import { $P, $C, Size, Shadow, Rounded, Emits, VModel, ProvideEffects, borderColorPresets } from '../../core'
+
 /**
  * Menu 菜单
  * @description 菜单组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/navigation/menu.html
+ * 
  * @property {String} title 标题，默认为 空
  * @property {Boolean} bordered = [false|true] 边框，默认为false
  * @property {Boolean} horizontal = [true|false] 横排，默认为false

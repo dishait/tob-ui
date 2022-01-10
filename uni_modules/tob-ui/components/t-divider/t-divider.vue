@@ -6,10 +6,12 @@
 
 <script>
 import { $P, $C } from "../../core"
+
 /**
  * Divider 分割线
  * @description 分割线组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/divider.html
+ * 
  * @property {String} text 文本
  * @property {Boolean} vertical = [false|true] 竖排，默认为 false
  *

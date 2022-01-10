@@ -32,9 +32,10 @@ import tIcon from '../t-icon/t-icon.vue'
 import { $C, $P, Size, Emits, Shadow, Rounded } from '../../core'
 
 /**
- * 图片
+ * Img 图片
  * @description 图片组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/base/img.html
+ * 
  * @property {String} src 图片地址
  * @property {Boolean} webp = [true|false] 解析 webp 格式，默认为 false 不解析(微信小程序)
  * @property {Boolean} lazyLoad = [true|false] 懒加载，默认为 false (微信小程序、百度小程序、字节跳动小程序、飞书小程序)

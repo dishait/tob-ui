@@ -15,10 +15,11 @@
 
 <script>
 import { $P, $C, $T, Emits, Flex } from '../../core'
+
 /**
  * Field 表单域
  * @description 表单域组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/form.html
  *
  * @property {String} label 标签
  * @property {String} labelIcon 标签图标

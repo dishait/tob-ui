@@ -30,10 +30,11 @@
 
 <script>
 import { $P, $C, Emits, Size, Color, Shadow, Rounded } from '../../core'
+
 /**
- * Button 按钮
+ * Btn 按钮
  * @description 按钮组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/base/btn.html
  *
  * @property {Boolean} loading = [true|false] 原生 loading
  * @property {Boolean} ghost = [true|false] 幽灵，默认为false

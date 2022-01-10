@@ -18,7 +18,7 @@ import { $P, $C, Color, Rounded, Shadow, Size, Flex } from '../../core'
 /**
  * GirdItem 宫格项
  * @description 宫格项组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/navigation/grid.html
  *
  * @property {String} icon 图标
  * @property {String} text 文本

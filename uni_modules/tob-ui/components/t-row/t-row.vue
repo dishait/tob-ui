@@ -6,10 +6,11 @@
 
 <script>
 import { $P, $C, Flex, Emits } from '../../core'
+
 /**
  * Row 布局行
  * @description 布局行组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/base/layout.html
  *
  * @property {String} mx = [0rpx|10rpx|20rpx|30rpx|....] 左右边距
  * @property {String} my = [0rpx|10rpx|20rpx|30rpx|....] 上下边距

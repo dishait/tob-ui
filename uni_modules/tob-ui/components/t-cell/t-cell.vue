@@ -20,10 +20,12 @@
 
 <script>
 import { $P, $C, Emits } from '../../core/index.js'
+
 /**
- * Cell
+ * Cell 单元格
  * @description 单元格组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/base/cell.html
+ * 
  * @property {String} desc 描述
  * @property {String} title 标题，默认为空
  * @property {String} value 内容，默认为空

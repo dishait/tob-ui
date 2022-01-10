@@ -4,10 +4,11 @@
 
 <script>
  import { $P, $C } from "../../core"
+ 
 /**
- * Overlay 遮罩层
- * @description 遮罩层组件
- * @tutorial TODO 文档
+ * Overlay 遮罩
+ * @description 遮罩组件
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/feedback/overlay.html
  * 
  * @property {Number} zIndex = [98|99|100|101|...] 层级，默认为100
  * @property {Boolean} slotCenter = [false|true] 嵌入内容居中，默认为true

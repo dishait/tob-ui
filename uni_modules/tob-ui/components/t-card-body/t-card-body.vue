@@ -6,10 +6,11 @@
 
 <script>
 import { Emits, Size } from '../../core'
+
 /**
- * CardBody 卡片体区域
- * @description 卡片体区域组件
- * @tutorial TODO 文档
+ * CardBody 卡片体
+ * @description 卡片体组件
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/card.html
  * 
  * @property {String} size = [xs|sm|md|lg|...] 尺寸，默认为 md
  *

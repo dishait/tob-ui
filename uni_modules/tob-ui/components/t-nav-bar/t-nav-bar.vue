@@ -38,7 +38,7 @@ import { $P, $C, Color, Shadow, Emits } from '../../core'
 /**
  * NavBar 导航栏
  * @description 导航栏组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/navigation/navBar.html
  *
  * @property {String} title 标题
  * 

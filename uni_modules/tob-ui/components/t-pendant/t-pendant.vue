@@ -6,10 +6,11 @@
 
 <script>
 import { Emits } from "../../core"
+
 /**
  * Pendant 挂件
  * @description 挂件组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/pendant.html
  *
  * @event {Function} click 点击事件
  */

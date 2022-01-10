@@ -29,7 +29,7 @@ const shouldApplyStatusbarModes = ['top', 'left', 'right']
 /**
  * Popup 弹出层
  * @description 弹出层组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/base/popup.html
  *
  * @property {String} closeIcon = [close|close-circle|....] 关闭图标，默认为空，为空时不显示
  *

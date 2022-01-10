@@ -6,10 +6,11 @@
 
 <script>
 import { $P, Emits, VModel, ProvideEffects } from '../../core'
+
 /**
  * Collapse 折叠面板
  * @description 折叠面板组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/collapse.html
  *
  * @property {Boolean} border = [true|false] 边框，默认为false
  * @property {Boolean} accordion = [true|false] 手风琴模式，默认为 false

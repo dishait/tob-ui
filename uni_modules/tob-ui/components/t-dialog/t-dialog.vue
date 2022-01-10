@@ -27,7 +27,7 @@ import { $P, $C, Rounded, Emits, Size, textColorPresets } from '../../core'
 /**
  * Dialog 弹出框
  * @description 弹出框组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/feedback/dialog.html
  *
  * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为100
  * @property {Boolean} closeOnClickMask = [false|true] 点击蒙版关闭，默认为 true

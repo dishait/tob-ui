@@ -17,13 +17,13 @@
 </template>
 
 <script>
+import { FieldTrack } from '../t-field/mixin'
 import { $P, $C, VModel, Rounded, Shadow, Emits, Color, Size } from '../../core'
 
-import { FieldTrack } from '../t-field/mixin'
 /**
  * Stepper 步进器
  * @description 步进器组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/stepper.html
  *
  * @property {Number} step 步长，默认为 1
  * @property {Number} max 最大值，默认为 10000

@@ -44,8 +44,7 @@ import { $P, $C, $T, Emits, Color, Rounded, Size, Shadow } from '../../core/inde
 /**
  * NoticeBar 通知栏
  * @description 通知栏组件
- * @tutorial TODO 文档
- *
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/noticeBar.html
  *
  * @property {Boolean} light = [true|false] 亮色，默认为 true
  * @property {Boolean} outline = [true|false] 轮廓，默认为 false

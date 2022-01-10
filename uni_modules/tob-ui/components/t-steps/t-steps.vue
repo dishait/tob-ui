@@ -13,7 +13,7 @@ const presetColors = createColorPresets('step')
 /**
  * Steps 步骤条
  * @description 步骤条组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/steps.html
  *
  * @property {Number} current 当前进度，默认为0
  * 

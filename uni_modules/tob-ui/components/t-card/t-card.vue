@@ -14,7 +14,7 @@ import { $C, $P, Size, Flex, Color, Emits, Shadow, Rounded } from '../../core'
 /**
  * Card 卡片
  * @description 卡片组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/card.html
  * 
  * @property {Boolean} light = [true|false] 高亮，默认为 false
  * @property {Boolean} outline = [true|false] 轮廓，默认为 false

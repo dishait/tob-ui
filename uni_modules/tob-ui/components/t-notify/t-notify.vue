@@ -18,9 +18,9 @@ const debounce = fn => {
 }
 
 /**
- * Notify 消息通知
- * @description 消息通知组件
- * @tutorial TODO 文档
+ * Notify 消息
+ * @description 消息组件
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/feedback/notify.html
  *
  * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为100
  *

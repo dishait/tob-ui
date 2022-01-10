@@ -6,10 +6,12 @@
 
 <script>
 import { $P, $C, Size, Color, textColorPresets } from '../../core'
+
 /**
  * Link 链接
  * @description 链接组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/navigation/link.html
+ * 
  * @property {String} to = [/pages/|....]跳转，只允许navigateTo
  * @property {String} color = [primary|secondary|accent|neutral|base|info|success|warning|error|...] 颜色，默认为空
  *

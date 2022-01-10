@@ -55,7 +55,7 @@ import { $P, Emits, Size } from '../../core/index.js'
 /**
  * Banner 轮播图
  * @description 轮播图组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/banner.html
  *
  * @property {Number} duration = [250|500|....] 滑动动画时长，默认为 500
  * @property {String} indicatorColor = [#868e96|....] 指示点颜色，默认为 #868e96

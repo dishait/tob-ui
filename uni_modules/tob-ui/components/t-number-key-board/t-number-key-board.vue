@@ -19,10 +19,12 @@
 
 <script>
 import { $P, $C, Emits, VModel } from "../../core"
+
 /**
  * NumberKeyBoard 数字键盘
  * @description 数字键盘组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/numberKeyBoard.html
+ * 
  * @property {Number} maxlength 最大长度，默认为 100
  * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为100
  * @property {Arrary} values 待选值，默认为 [1, 2, 3, 4, 5, 6, 7, 8, 9, '00', 0, '.']

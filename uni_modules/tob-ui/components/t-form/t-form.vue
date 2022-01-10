@@ -12,7 +12,7 @@ const { is, not } = $T.types
 /**
  * Form 表单
  * @description 表单组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/form.html
  *
  * @property {String} validateTrigger = [onBlur|onChange|manual] 校验时机，默认为 onBlur
  *

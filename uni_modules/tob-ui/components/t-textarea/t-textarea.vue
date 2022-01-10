@@ -42,7 +42,7 @@ import { $P, $M, $C, Color, createColorPresets, Emits, VModel, Size, Rounded } f
 /**
  * Textarea 文本区
  * @description 文本区组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/textarea.html
  *
  * @property {String} placeholder 输入框为空时占位符，默认为空
  *

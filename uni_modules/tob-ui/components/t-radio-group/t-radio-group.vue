@@ -11,7 +11,7 @@ import { VModel, Emits, ProvideEffects } from "../../core"
 /**
  * RadioGroup 单选框组
  * @description 单选框组组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/radio.html
  *
  * @event {Function} click 点击事件
  * @event {Function} change 变更事件

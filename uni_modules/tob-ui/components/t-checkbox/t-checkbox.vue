@@ -9,9 +9,9 @@
 import { $P, $C, $M, Color, Size, Rounded, InjectEffects, createColorPresets } from '../../core'
 
 /**
- * Radio 复选框
+ * Checkbox 复选框
  * @description 复选框组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/checkbox.html
  *
  * @property {String} value 标识，会被checkbox-group记录
  * @property {Boolean} disabled = [true|false] 禁用

@@ -8,10 +8,11 @@
 <script>
 import { FieldTrack } from "../t-field/mixin"
 import { $P, $C, $M, Emits, Color, Size, Rounded, VModel, createColorPresets } from '../../core'
+
 /**
  * Switch 开关
  * @description 开关组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/switch.html
  *
  * @property {Boolean} disabled = [true|false] 禁用
  *

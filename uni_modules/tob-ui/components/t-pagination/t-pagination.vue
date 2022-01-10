@@ -24,10 +24,11 @@
 <script>
 import tIcon from '../t-icon/t-icon.vue'
 import { $P, $C, Size, Color, VModel, Emits, Shadow, Rounded } from '../../core'
+
 /**
- * BackTop 回到顶部
- * @description 回到顶部组件
- * @tutorial TODO 文档
+ * Pagination 分页
+ * @description 分页组件
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/navigation/pagination.html
  *
  * @property {Boolean} light = [true|false] 亮色，默认为 false
  * @property {Boolean} outline = [true|false] 轮廓，默认为 false

@@ -16,10 +16,11 @@
 
 <script>
 import { $P, $C, $M, InjectEffects } from '../../core'
+
 /**
- * Menu 菜单项
+ * MenuItem 菜单项
  * @description 菜单项组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/navigation/menu.html
  * 
  * @property {String} icon 图标
  * @property {String} name 选中标识

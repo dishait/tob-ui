@@ -10,7 +10,8 @@ import { $P, $C, Emits } from '../../core'
 /**
  * PendantItem 挂件项
  * @description 挂件项组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/show/pendant.html
+ * 
  * @property {String} position = [left-top|center-top|right-top|left-middle|center-middle|right-middle|left-bottom|center-bottom|right-bottom] 位置，默认为 右上角
  *
  *	@value left-top 左上

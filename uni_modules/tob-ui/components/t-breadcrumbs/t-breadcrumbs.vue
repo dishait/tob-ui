@@ -20,7 +20,7 @@ import { $P, Size, Color, textColorPresets } from '../../core'
 /**
  * Breadcrumbs 面包屑
  * @description 面包屑组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/navigation/breadcrumbs.html
  * @property {String} leftIcon 前缀图标
  * @property {String} rightIcon 后缀图标
  * @property {Arrary} list 路径列表，项目为String类型

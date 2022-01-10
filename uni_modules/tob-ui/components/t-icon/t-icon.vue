@@ -9,10 +9,11 @@
 
 <script>
 import { $P, $C, Emits, Color, textColorPresets } from '../../core'
+
 /**
  * Icon 图标
  * @description 图标组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/base/icon.html
  *
  * @property {String} type 类型
  * @property {String} classPrefix = [tob-ui-icon|iconfont|...] 默认为tob-ui-icon，前缀

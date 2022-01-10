@@ -9,9 +9,9 @@ import { FieldTrack } from "../t-field/mixin"
 import { Emits, ProvideEffects, VModel } from "../../core"
 
 /**
- * CheckboxGroup 多选框组
- * @description 多选框组组件
- * @tutorial TODO 文档
+ * CheckboxGroup 复选框组
+ * @description 复选框组组件
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/checkbox.html
  *
  * @event {Function} click 点击事件
  * @event {Function} change 变更事件

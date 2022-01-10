@@ -11,10 +11,12 @@
 
 <script>
 import { $P, $C, Emits, Size, Rounded, Color, Shadow } from '../../core'
+
 /**
  * PasswordInput 密码输入框
  * @description 密码输入框组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/passwordInput.html
+ * 
  * @property {String} values 值
  * @property {Number} length 长度，默认为 5
  * @property {Boolean} focus = [true|false] 聚焦，默认为 true

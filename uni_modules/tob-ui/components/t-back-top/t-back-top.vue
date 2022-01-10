@@ -24,7 +24,7 @@ uni.useBackTopMixin = (topBounds = 50) => {
 /**
  * BackTop 回到顶部
  * @description 回到顶部组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/others/backTop.html
  *
  * @property {String} right = [50rpx|....] 右边，默认为 50rpx
  * @property {Boolean} light = [true|false] 亮色，默认为 false

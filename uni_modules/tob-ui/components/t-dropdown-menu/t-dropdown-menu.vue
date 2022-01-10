@@ -32,10 +32,12 @@
 <script>
 import tIcon from '../t-icon/t-icon.vue'
 import { $P, $C, Emits, VModel, textColorPresets, Shadow, Rounded } from '../../core'
+
 /**
  * DropdownMenu 下拉菜单
  * @description 下拉菜单组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/feedback/dropdownMenu.html
+ * 
  * @property {Object} options 选项
  * @property {Object} menuItemHeights 子项目高度
  * @property {Boolean} disabled = [true|false] 禁用

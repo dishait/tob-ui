@@ -6,10 +6,11 @@
 
 <script>
 import { $P, Emits } from '../../core'
+
 /**
  * Row 布局列
  * @description 布局列组件
- * @tutorial TODO 文档
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/base/layout.html
  *
  * @property {Number} span = [1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24] 跨度，一行分为 24 份跨度，默认为 1
  * @property {Number} offset = [1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24] 偏移，与跨度相同计算规则，默认为 0

@@ -21,10 +21,11 @@
 <script>
 import { FieldTrack } from '../t-field/mixin'
 import { $P, $C, Emits, VModel } from '../../core'
+
 /**
- * Slider 滑动选择器
- * @description 滑动选择器组件
- * @tutorial TODO 文档
+ * Slider 滑块
+ * @description 滑块组件
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/slider.html
  *
  * @property {Number} min 最小值，默认为 0
  * @property {Number} max 最大值，默认为 100

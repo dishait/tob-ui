@@ -36,9 +36,9 @@ import tIcon from '../t-icon/t-icon.vue'
 import { $P, $C, Size, Emits, Rounded, VModel, Shadow, Color } from '../../core/index.js'
 
 /**
- * Search 搜索
- * @description 搜索组件
- * @tutorial TODO 文档
+ * Search 搜索框
+ * @description 搜索框组件
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/form/search.html
  *
  * @property {String} placeholder 占位符，默认为请输入
  * @property {String} leftIcon 左侧图标，默认为 search
