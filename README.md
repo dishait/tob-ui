@@ -20,7 +20,10 @@
 
 ## 预览 🦖
 
- <img src="/static/wechat.jpg" width = "150" height = "150" alt="图片名称" align=center />
+使用 **微信扫码** 进行预览
+
+ <img src="https://dishait.gitee.io/tob-ui-doc/home/wechat-facade.jpg" width = "150" height = "150" alt="图片名称" align=center />
+ 
 
 <br />
 <br />
