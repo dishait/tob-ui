@@ -4,11 +4,11 @@
 	"version": "1.0.0",
 	"description": "tob-ui",
 	"keywords": [
-		"tob-ui"
-	],
-	"repository": "",
+        "tob-ui"
+    ],
+	"repository": "https://github.com/dishait/tob-ui",
 	"engines": {
-		"HBuilderX": "^3.1.0"
+		"HBuilderX": "^3.3.6"
 	},
 	"dcloudext": {
 		"category": [
@@ -27,44 +27,44 @@
 			"qq": ""
 		},
 		"declaration": {
-			"ads": "",
-			"data": "",
-			"permissions": ""
+			"ads": "无",
+			"data": "无",
+			"permissions": "无"
 		},
-		"npmurl": ""
+		"npmurl": "https://www.npmjs.com/package/tob-ui"
 	},
 	"uni_modules": {
 		"dependencies": [],
 		"encrypt": [],
 		"platforms": {
 			"cloud": {
-				"tcb": "u",
-				"aliyun": "u"
+				"tcb": "y",
+				"aliyun": "y"
 			},
 			"client": {
 				"Vue": {
-					"vue2": "u",
-					"vue3": "u"
+					"vue2": "y",
+					"vue3": "y"
 				},
 				"App": {
-					"app-vue": "u",
-					"app-nvue": "u"
+					"app-vue": "y",
+					"app-nvue": "n"
 				},
 				"H5-mobile": {
 					"Safari": "u",
-					"Android Browser": "u",
-					"微信浏览器(Android)": "u",
+					"Android Browser": "y",
+					"微信浏览器(Android)": "y",
 					"QQ浏览器(Android)": "u"
 				},
 				"H5-pc": {
-					"Chrome": "u",
-					"IE": "u",
-					"Edge": "u",
+					"Chrome": "y",
+					"IE": "n",
+					"Edge": "y",
 					"Firefox": "u",
 					"Safari": "u"
 				},
 				"小程序": {
-					"微信": "u",
+					"微信": "y",
 					"阿里": "u",
 					"百度": "u",
 					"字节跳动": "u",
