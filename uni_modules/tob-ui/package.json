@@ -1,10 +1,15 @@
 {
 	"id": "tob-ui",
 	"displayName": "tob-ui",
-	"version": "1.0.0",
-	"description": "tob-ui",
+	"version": "1.0.2",
+	"description": "更现代的 uniapp ui 组件库",
 	"keywords": [
-        "tob-ui"
+        "组件库",
+        "主题",
+        "现代美观的",
+        "",
+        "vue3",
+        "动态主题"
     ],
 	"repository": "https://github.com/dishait/tob-ui",
 	"engines": {

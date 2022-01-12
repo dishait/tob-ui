@@ -15,6 +15,9 @@ export default {
 <style lang="less">
 @import '@/uni_modules/tob-ui/index.less';
 
+// 质感主题
+// @import '@/theme/texture.less';
+
 // 自定义的位置(popup)
 .custom-popup-close-position {
 	top: 10rpx;
