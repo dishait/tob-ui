@@ -1,5 +1,9 @@
 // 基础
 export const base = [{
+	name: 'block',
+	desc: '块',
+	icon: 'eye'
+},{
 	name: 'btn',
 	desc: '按钮',
 	icon: 'experiment'
