@@ -3,11 +3,11 @@ export const base = [{
 	name: 'block',
 	desc: '块',
 	icon: 'eye'
-},{
+}, {
 	name: 'btn',
 	desc: '按钮',
 	icon: 'experiment'
-},  {
+}, {
 	name: 'cell',
 	desc: '单元格',
 	icon: 'minus-square'
@@ -165,6 +165,10 @@ export const show = [{
 
 
 export const others = [{
+	name: 'sticky',
+	desc: '吸顶',
+	icon: 'pushpin'
+}, {
 	name: 'backTop',
 	desc: '回到顶部',
 	icon: 'up-square'
