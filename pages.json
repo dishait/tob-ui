@@ -112,8 +112,12 @@
 		},
 		{
 			"path": "pages/others/backTop/backTop"
-		}, {
+		},
+		{
 			"path": "pages/base/block/block"
+		},
+		{
+			"path": "pages/others/sticky/sticky"
 		}
 	],
 	"globalStyle": {
