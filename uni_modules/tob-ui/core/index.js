@@ -2,8 +2,11 @@
 import $T from './tools/index.js'
 
 //  hack
+import $DA from './hack/data.js'
 import $P from './hack/props.js'
+import $H from './hack/index.js'
 import $M from './hack/methods.js'
+import $DE from './hack/designs.js'
 import $C from './hack/computed.js'
 
 // design
@@ -12,17 +15,31 @@ import Shadow from './design/shadow.js'
 import VModel from './design/VModel.js'
 import Rounded from './design/rounded.js'
 import Flex from './design/flex.js'
-import Color, { bgColorPresets, textColorPresets, borderColorPresets, createColorPresets } from './design/color.js'
+import Color, {
+	bgColorPresets,
+	textColorPresets,
+	borderColorPresets,
+	createColorPresets
+} from './design/color.js'
 
-import { ProvideEffects, InjectEffects } from './design/effects.js'
+import {
+	ProvideEffects,
+	InjectEffects
+} from './design/effects.js'
 
-import { ProvideCounter, InjectCounter } from './design/counter.js'
+import {
+	ProvideCounter,
+	InjectCounter
+} from './design/counter.js'
 
 import Emits from './design/emits.js'
 
 export {
+	$H, // hack
 	$T, // 工具库
+	$DA, // data生成器
 	$P, // props生成器
+	$DE, // design生成器
 	$M, // methods生成器
 	$C, // computed生成器
 	Size, // 尺寸系统
@@ -39,5 +56,5 @@ export {
 	bgColorPresets, // 背景颜色预设
 	textColorPresets, // 文本颜色预设
 	createColorPresets, // 创建颜色预设
-	borderColorPresets, // 边框颜色预设
+	borderColorPresets // 边框颜色预设
 }

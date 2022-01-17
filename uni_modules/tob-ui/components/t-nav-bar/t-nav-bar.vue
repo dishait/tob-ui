@@ -2,7 +2,7 @@
 	<view
 		class="t-nav-bar"
 		:style="{ zIndex, height }"
-		:class="[Sticky, Color, Shadow]"
+		:class="[Sticky, Color, Shadow, ApplyStatusbar]"
 		@click="click"
 	>
 		<view class="nav-bar-left" @click="leftClick">
@@ -43,6 +43,7 @@ import { $P, $C, Color, Shadow, Emits } from '../../core'
  * @property {String} title 标题
  * 
  * @property {Number} zIndex = [98|99|100|101|....] 层级，默认为 100
+ * @property {Boolean} applyStatusbar = [false|true] 应用状态栏，默认为 true
  * @property {String} leftIcon 左侧图标，默认为 left 箭头，为空字符串时将不显示
  * @property {String} leftText 左侧文本
  * @property {String} rightIcon 右侧图标
@@ -106,6 +107,7 @@ export default {
 		rightIcon: '', // 右侧图标
 		sticky: false, // 粘性定位
 		leftIcon: 'left', // 左侧图标
+		applyStatusbar: true, // 状态栏
 		customGo: false, // 自定义跳转，默认走navigateBack
 		height: '44px', // 高度
 		// #ifdef MP
@@ -113,7 +115,8 @@ export default {
 		// #endif
 	}),
 	computed: $C({
-		Sticky: 'sticky top-0' // 粘性定位
+		Sticky: 'sticky top-0', // 粘性定位
+		ApplyStatusbar: 'statusbar', // 状态栏
 	}),
 	methods: {
 		// 左侧点击事件
@@ -140,7 +143,6 @@ export default {
 .t-nav-bar {
 	.flex;
 	.px-2;
-	.statusbar;
 	.items-center;
 	.justify-between;
 }

@@ -1,6 +1,5 @@
 {
-	"pages": [
-		{
+	"pages": [{
 			"path": "pages/home/home"
 		},
 		{
@@ -113,6 +112,14 @@
 		},
 		{
 			"path": "pages/others/backTop/backTop"
+		},
+		{
+			"path": "pages/base/block/block"
+		},
+		{
+			"path": "pages/others/sticky/sticky"
+		}, {
+			"path": "pages/others/statusbar/statusbar"
 		}
 	],
 	"globalStyle": {
@@ -120,10 +127,10 @@
 		"navigationBarTextStyle": "black"
 	},
 	"easycom": {
-	  "autoscan": true,
-	  "custom": {
-	    // ....此处省略你的其他 easycom 配置
-	    "^t-(.*)": "@/uni_modules/tob-ui/components/t-$1/t-$1.vue"
-	  }
+		"autoscan": true,
+		"custom": {
+			// ....此处省略你的其他 easycom 配置
+			"^t-(.*)": "@/uni_modules/tob-ui/components/t-$1/t-$1.vue"
+		}
 	}
 }
