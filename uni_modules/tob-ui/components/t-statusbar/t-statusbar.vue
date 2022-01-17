@@ -33,7 +33,7 @@ const options = $H({
 
 /**
  * Statusbar
- * @description Statusbar 状态栏组件
+ * @description 状态栏组件
  * @tutorial https://dishait.gitee.io/tob-ui-doc/components/others/statusbar.html
  * 
  * @property {Number} zIndex = [100|....] 层级，默认为100

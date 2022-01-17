@@ -161,6 +161,10 @@ export const show = [{
 	name: 'banner',
 	desc: '轮播图',
 	icon: 'Batchfolding'
+}, {
+	name: 'alert',
+	desc: '警告框',
+	icon: 'notification'
 }]
 
 
