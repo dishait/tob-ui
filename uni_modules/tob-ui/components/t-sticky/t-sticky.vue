@@ -7,7 +7,7 @@
 <script>
 import { $H, bgColorPresets } from "../../core"
 
-
+// 预设高度
 const hights = {
 	// #ifdef MP
 	navBar: `calc(48px + var(--status-bar-height))`,
@@ -49,6 +49,7 @@ const options = $H({
 /**
  * Sticky 吸顶
  * @description 吸顶组件
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/others/sticky.html
  * 
  * @property {Number} zIndex = [100|....] 层级，默认为100
  * @property {Boolean} disabled = [false|true] 禁用，默认为false

@@ -169,6 +169,10 @@ export const others = [{
 	desc: '吸顶',
 	icon: 'pushpin'
 }, {
+	name: 'statusbar',
+	desc: '状态栏',
+	icon: 'smile'
+}, {
 	name: 'backTop',
 	desc: '回到顶部',
 	icon: 'up-square'

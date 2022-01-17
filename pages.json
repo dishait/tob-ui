@@ -118,6 +118,8 @@
 		},
 		{
 			"path": "pages/others/sticky/sticky"
+		}, {
+			"path": "pages/others/statusbar/statusbar"
 		}
 	],
 	"globalStyle": {
