@@ -180,8 +180,12 @@ export const others = [{
 	name: 'gap',
 	desc: '间隔槽',
 	icon: 'windows'
-},{
+}, {
 	name: 'backTop',
 	desc: '回到顶部',
 	icon: 'up-square'
+}, {
+	name: 'line',
+	desc: '线条',
+	icon: 'dash'
 }]

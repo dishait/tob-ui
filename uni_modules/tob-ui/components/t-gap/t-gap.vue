@@ -1,5 +1,5 @@
 <template>
-	<view :class="[Color, Shadow, Rounded, Size]" />
+	<view :class="[Color, Shadow, Rounded, Size]" @click="click"/>
 </template>
 
 <script>

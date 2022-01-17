@@ -1,5 +1,5 @@
 <template>
-	<view :class="[Disabled, Color]" :style="[OffsetTop, ZIndex]">
+	<view :class="[Disabled, Color]" :style="[OffsetTop, ZIndex]" @click="click">
 		<slot />
 	</view>
 </template>

@@ -118,15 +118,18 @@
 		},
 		{
 			"path": "pages/others/sticky/sticky"
-		}, 
+		},
 		{
 			"path": "pages/others/statusbar/statusbar"
-		}, 
+		},
 		{
 			"path": "pages/show/alert/alert"
-		}, 
+		},
 		{
 			"path": "pages/others/gap/gap"
+		}, 
+		{
+			"path": "pages/others/line/line"
 		}
 	],
 	"globalStyle": {
