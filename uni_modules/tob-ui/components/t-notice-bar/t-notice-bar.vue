@@ -66,7 +66,7 @@ import { $P, $C, $T, Emits, Color, Rounded, Size, Shadow } from '../../core/inde
  * 	@value warning 警告
  * 	@value error 错误
  *
- * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 full
+ * @property {String} rounded = [none|sm|base|md|lg|xl|2xl|3xl|full|...] 圆角，默认为 none
   * 
  * 	@value none 无 
  * 	@value sm 小 

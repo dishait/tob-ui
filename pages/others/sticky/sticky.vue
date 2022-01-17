@@ -1,6 +1,6 @@
 <template>
 	<view class="pb-5">
-		<t-nav-bar title="Sticky" leftText="Home" sticky />
+		<t-nav-bar title="Sticky" sticky />
 				
 		<view class="h-15" />
 

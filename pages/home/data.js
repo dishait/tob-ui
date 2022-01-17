@@ -177,6 +177,10 @@ export const others = [{
 	desc: '状态栏',
 	icon: 'smile'
 }, {
+	name: 'gap',
+	desc: '间隔槽',
+	icon: 'windows'
+},{
 	name: 'backTop',
 	desc: '回到顶部',
 	icon: 'up-square'
