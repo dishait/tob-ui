@@ -35,7 +35,7 @@ const options = $H({
 /**
  * Block 块
  * @description 块组件
- * 
+ * @tutorial https://dishait.gitee.io/tob-ui-doc/components/base/block.html
  * @property {String} tClass = [...] 扩展样式，默认为空
  * @property {Boolean} light = [true|false] 高亮，默认为false
  * @property {Boolean} outline = [true|false] 轮廓，默认为false
