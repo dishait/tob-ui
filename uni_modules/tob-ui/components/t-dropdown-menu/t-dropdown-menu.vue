@@ -1,6 +1,6 @@
 <template>
 	<view class="t-dropdown-menu" @click="click" :style="[Style]">
-		<view class="dropdown-menu-mask" :class="[MaskVisible]" @click="maskClick" />
+		<view class="dropdown-menu-mask" @touchmove.stop.prevent :class="[MaskVisible]" @click="maskClick" />
 		<view class="dropdown-menu-row" :class="[Disabled, Shadow]">
 			<view
 				:key="k"

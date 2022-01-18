@@ -1,5 +1,5 @@
 <template>
-	<view class="t-overlay" :class="[Visible, SlotCenter]" :style="[Style]" @click="click"><slot /></view>
+	<view class="t-overlay" @touchmove.stop.prevent :class="[Visible, SlotCenter]" :style="[Style]" @click="click"><slot /></view>
 </template>
 
 <script>

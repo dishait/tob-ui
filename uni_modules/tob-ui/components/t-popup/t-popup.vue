@@ -1,5 +1,5 @@
 <template>
-	<view class="popup-mask" :class="[maskVisible, Mode]" @click="maskClick" :style="{ zIndex }">
+	<view class="popup-mask" @touchmove.stop.prevent :class="[maskVisible, Mode]" @click="maskClick" :style="{ zIndex }">
 		<view
 			class="t-popup"
 			:style="{ zIndex }"

@@ -1,5 +1,5 @@
 <template>
-	<view class="dialog-mask" :class="[MaskVisible]" @click="maskClick" :style="[Style]">
+	<view class="dialog-mask" @touchmove.stop.prevent :class="[MaskVisible]" @click="maskClick" :style="[Style]">
 		<view class="t-dialog" :class="[Visible, Rounded, Size]" @click.stop="click">
 			<view class="dialog-header">{{ title }}</view>
 			<view class="dialog-main">{{ content }}</view>

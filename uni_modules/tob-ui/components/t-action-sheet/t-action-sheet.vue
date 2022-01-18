@@ -1,5 +1,5 @@
 <template>
-	<view class="action-sheet-mask" @click="maskClick" :class="[MaskVisible]" :style="[Style]">
+	<view class="action-sheet-mask" @touchmove.stop.prevent @click="maskClick" :class="[MaskVisible]" :style="[Style]">
 		<view class="t-action-sheet" :class="[Visible, Rounded]" @click.stop="click">
 			<view class="action-sheet-header" v-if="desc" @click="headerClick">{{ desc }}</view>
 
