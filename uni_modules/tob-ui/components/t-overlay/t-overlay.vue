@@ -63,9 +63,8 @@ export default {
 .t-overlay {
 	.fixed;
 	.top-0;
-	.left-0;
-	.right-0;
-	.bottom-0;
+	.w-screen;
+	.h-screen;
 	.opacity-0;
 	/* #ifdef H5 */
 	.cursor-pointer;
@@ -80,7 +79,7 @@ export default {
 .overlay {
 	// 显示
 	&-show {
-		opacity: 1;
+		.opacity-100;
 		pointer-events: auto;
 	}
 	

@@ -153,6 +153,7 @@ export default {
 
 <style scoped lang="less">
 @import (reference, less) "../../index.less";
+@import (reference, less) "../../core/tool.less";
 
 .t-dialog {
 	.flex;
@@ -207,25 +208,7 @@ export default {
 		letter-spacing: 10rpx;
 	}
 
-	&-mask {
-		.fixed;
-		.top-0;
-		.left-0;
-		.right-0;
-		.bottom-0;
-		.opacity-0;
-		/* #ifdef H5 */
-		.cursor-pointer;
-		/* #endif */
-		pointer-events: none;
-		will-change: transform;
-		transition: all 0.3s ease;
-		background-color: rgba(38, 38, 38, 0.7);
-		&-show {
-			opacity: 1;
-			pointer-events: auto;
-		}
-	}
+	.ProvideMask();
 
 	&-mask {
 		.flex;

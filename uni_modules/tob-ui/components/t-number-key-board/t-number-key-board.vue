@@ -105,9 +105,8 @@ export default {
 .t-number-key-board-mask {
 	.fixed;
 	.top-0;
-	.left-0;
-	.right-0;
-	.bottom-0;
+	.w-screen;
+	.h-screen;
 	.opacity-0;
 	transition: all 0.35s ease;
 	transform: translate(0, 100%);
