@@ -53,7 +53,7 @@ const presetColors = createColorPresets('step')
 export default {
 	name: 't-steps',
 	mixins: [Emits(['click']), ProvideCounter('Steps'), ProvideEffects('Steps')],
-	emits: ['fail', 'success'],
+	emits: ['reset', 'fail', 'success'],
 	props: $P({
 		current: 0, // 当前步骤
 		fail: false, // 失败
