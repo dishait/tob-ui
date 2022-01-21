@@ -1,28 +1,28 @@
 {
   "name": "tob-ui",
   "version": "1.0.0",
-  "description": "更现代的 uniapp ui 组件库",
+  "description": "更现代的 uniapp ui 😎",
+  "main": "main.js",
   "scripts": {
-    "auto:create": "node script/create.js"
+    "auto:create": "node scripts/create.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dishait/tob-ui.git"
   },
-  "keywords": [
-    "ui",
-    "tob",
-    "uniapp",
-    "dishait"
-  ],
-  "author": "markthree",
+  "keywords": [],
+  "author": {
+    "name": "markthree",
+    "email": "1801982702@qq.com",
+    "url": "https://github.com/markthree"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dishait/tob-ui/issues"
   },
-  "homepage": "https://dishait.gitee.io/tob-ui-doc/",
+  "homepage": "https://github.com/dishait/tob-ui#readme",
   "devDependencies": {
-    "@markthree/ilazy": "^1.0.1",
-    "@markthree/node-shared": "^1.3.0"
+    "@markthree/ilazy": "^1.0.2",
+    "@markthree/node-shared": "^1.3.2"
   }
 }
