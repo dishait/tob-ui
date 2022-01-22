@@ -1,11 +1,11 @@
 const { terminalColor } = require('@markthree/node-shared')
 
-const noticeSuccess = (msg = '创建成功') => {
-	console.log(terminalColor.green(msg))
+const noticeSuccess = (type = '创建') => {
+	console.log(terminalColor.green(type + '成功'))
 }
 
-const noticeFail = (msg = '创建失败') => {
-	console.log(terminalColor.red(msg))
+const noticeFail = (type = '创建') => {
+	console.log(terminalColor.red(type + '失败'))
 }
 
 module.exports = {

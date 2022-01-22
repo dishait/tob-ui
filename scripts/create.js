@@ -21,7 +21,7 @@ const { sorts } = require('./shared/constant')
 
 const runAutoCreate = async () => {
 	const type = await useInquirerList(
-		'😋 您希望创建以下哪种类型的文件呢？',
+		'😋 您希望创建以下哪种类型的模块呢？',
 		{
 			default: 'component',
 			choices: ['page', 'theme', 'component']

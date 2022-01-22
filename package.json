@@ -4,6 +4,7 @@
   "description": "更现代的 uniapp ui 😎",
   "main": "main.js",
   "scripts": {
+    "auto:remove": "node scripts/remove.js",
     "auto:create": "node scripts/create.js"
   },
   "repository": {
