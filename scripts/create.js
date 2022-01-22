@@ -21,7 +21,7 @@ const { sorts } = require('./shared/constant')
 
 const runAutoCreate = async () => {
 	const type = await useInquirerList(
-		'😋 您希望创建以下哪种类型的模块呢？',
+		'您希望创建以下哪种类型的模块呢？',
 		{
 			default: 'component',
 			choices: ['page', 'theme', 'component']
@@ -30,12 +30,10 @@ const runAutoCreate = async () => {
 
 	const t = genTypeToZh(type)
 
-	const name = await useInquirerQuestion(
-		`🧐 请输入该${t}名称`
-	)
+	const name = await useInquirerQuestion(`请输入该${t}名称`)
 
 	const desc = await useInquirerQuestion(
-		`😁 请输入该${t}的中文描述`
+		`请输入该${t}的中文描述`
 	)
 	const isComponent = type === 'component'
 	if (isComponent) {
@@ -50,7 +48,7 @@ const runAutoCreate = async () => {
 	const isPage = type === 'page'
 	if (isPage) {
 		const sort = await useInquirerList(
-			`🤔 请选择该${t}所属分类`,
+			`请选择该${t}所属分类`,
 			{ choices: sorts }
 		)
 		return await genPage(name, { sort, name, desc })

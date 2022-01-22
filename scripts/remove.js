@@ -19,7 +19,7 @@ const { sorts } = require('./shared/constant')
 
 const runAutoRemove = async () => {
 	const type = await useInquirerList(
-		'😋 您希望删除以下哪种类型的模块呢？',
+		'您希望删除以下哪种类型的模块呢？',
 		{
 			default: 'component',
 			choices: ['page', 'theme', 'component']
@@ -28,9 +28,7 @@ const runAutoRemove = async () => {
 
 	const t = typeToZh(type)
 
-	const name = await useInquirerQuestion(
-		`🧐 请输入该${t}名称`
-	)
+	const name = await useInquirerQuestion(`请输入该${t}名称`)
 
 	const isComponent = type === 'component'
 	if (isComponent) {
@@ -45,7 +43,7 @@ const runAutoRemove = async () => {
 	const isPage = type === 'page'
 	if (isPage) {
 		const sort = await useInquirerList(
-			`🤔 请选择该页面所属分类`,
+			`请选择该页面所属分类`,
 			{ choices: sorts }
 		)
 		return await removePage(name, sort)
@@ -120,7 +118,7 @@ const removeTheme = async name => {
 const isWillRemove = async (src, type) => {
 	if (pathExistsSync(src)) {
 		return await useInquirerConfirm(
-			'😥 再次确认是否删除?',
+			'再次确认是否删除?',
 			false
 		)
 	}
