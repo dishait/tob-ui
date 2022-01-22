@@ -24,7 +24,7 @@ const runAutoCreate = async () => {
 		'😋 您希望创建以下哪种类型的文件呢？',
 		{
 			default: 'component',
-			choices: ['page', 'component']
+			choices: ['page', 'theme', 'component']
 		}
 	)
 
@@ -32,11 +32,6 @@ const runAutoCreate = async () => {
 
 	const name = await useInquirerQuestion(
 		`🧐 请输入该${t}名称`
-	)
-
-	const sort = await useInquirerList(
-		`🤔 请选择该${t}所属分类`,
-		{ choices: sorts }
 	)
 
 	const desc = await useInquirerQuestion(
@@ -47,8 +42,17 @@ const runAutoCreate = async () => {
 		return await genComponent(name, { name, desc })
 	}
 
+	const isTheme = type === 'theme'
+	if (isTheme) {
+		return await genTheme(name, { name, desc })
+	}
+
 	const isPage = type === 'page'
 	if (isPage) {
+		const sort = await useInquirerList(
+			`🤔 请选择该${t}所属分类`,
+			{ choices: sorts }
+		)
 		return await genPage(name, { sort, name, desc })
 	}
 }
@@ -66,6 +70,7 @@ const p = createPath(__dirname)
 // 输出路径
 const destBasePaths = {
 	page: p('../pages'),
+	theme: p('../theme'),
 	component: p('../uni_modules/tob-ui/components')
 }
 
@@ -73,6 +78,7 @@ const destBasePaths = {
 const genTypeToZh = t => {
 	const types = {
 		page: '页面',
+		theme: '主题',
 		component: '组件'
 	}
 	return types[t] || '文件'
@@ -91,6 +97,7 @@ const genComponent = async (name, payload) => {
 	noticeFail()
 }
 
+// 创建页面
 const genPage = async (name, payload) => {
 	const { sort } = payload
 	const dp = createPath(destBasePaths.page)
@@ -105,6 +112,19 @@ const genPage = async (name, payload) => {
 		await writeJson(p('../pages.json'), pagesJson, {
 			spaces: '\t'
 		})
+		return noticeSuccess()
+	}
+	noticeFail()
+}
+
+// 创建主题
+const genTheme = async (name, payload) => {
+	const dp = createPath(destBasePaths.theme)
+	const dest = dp(`./${name}.less`)
+	const shouldCreate = await isWillCreate(dest)
+	if (shouldCreate) {
+		const src = p('./template/theme.less')
+		await gen(src, dest, payload)
 		return noticeSuccess()
 	}
 	noticeFail()
