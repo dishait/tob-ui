@@ -131,12 +131,6 @@
 		},
 		{
 			"path": "pages/others/line/line"
-		},
-		{
-			"path": "/pages/show/nihao/nihao"
-		},
-		{
-			"path": "/pages/show/nihao/nihao"
 		}
 	],
 	"globalStyle": {
