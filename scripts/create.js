@@ -1,9 +1,11 @@
+const pagesJson = require('../pages.json')
 const {
 	useInquirerList,
 	useInquirerConfirm,
 	useInquirerQuestion
 } = require('@markthree/ilazy')
 const {
+	writeJson,
 	createFile,
 	handlebars,
 	createPath,
@@ -44,6 +46,11 @@ const runAutoCreate = async () => {
 	if (isComponent) {
 		return await genComponent(name, { name, desc })
 	}
+
+	const isPage = type === 'page'
+	if (isPage) {
+		return await genPage(name, { sort, name, desc })
+	}
 }
 runAutoCreate()
 
@@ -82,9 +89,29 @@ const gen = async (src, dest, payload) => {
 const genComponent = async (name, payload) => {
 	const dp = createPath(destBasePaths.component)
 	const dest = dp(`./t-${name}/t-${name}.vue`)
-	if (isWillCreate(dest)) {
+	const shouldCreate = await isWillCreate(dest)
+	if (shouldCreate) {
 		const src = p('./template/component.vue')
 		await gen(src, dest, payload)
+		return noticeSuccess()
+	}
+	noticeFail()
+}
+
+const genPage = async (name, payload) => {
+	const { sort } = payload
+	const dp = createPath(destBasePaths.page)
+	const dest = dp(`./${sort}/${name}/${name}.vue`)
+	const shouldCreate = await isWillCreate(dest)
+	if (shouldCreate) {
+		const src = p('./template/page.vue')
+		pagesJson.pages.push({
+			path: `/pages/${sort}/${name}/${name}`
+		})
+		await gen(src, dest, payload)
+		await writeJson(p('../pages.json'), pagesJson, {
+			spaces: '\t'
+		})
 		return noticeSuccess()
 	}
 	noticeFail()

@@ -1,5 +1,6 @@
 {
-	"pages": [{
+	"pages": [
+		{
 			"path": "pages/home/home"
 		},
 		{
@@ -127,20 +128,19 @@
 		},
 		{
 			"path": "pages/others/gap/gap"
-		}, 
+		},
 		{
 			"path": "pages/others/line/line"
+		},
+		{
+			"path": "/pages/show/nihao/nihao"
+		},
+		{
+			"path": "/pages/show/nihao/nihao"
 		}
 	],
 	"globalStyle": {
 		"navigationStyle": "custom",
 		"navigationBarTextStyle": "black"
-	},
-	"easycom": {
-		"autoscan": true,
-		"custom": {
-			// ....此处省略你的其他 easycom 配置
-			"^t-(.*)": "@/uni_modules/tob-ui/components/t-$1/t-$1.vue"
-		}
 	}
 }
