@@ -7,11 +7,11 @@ const {
 const {
 	writeJson,
 	createFile,
-	handlebars,
 	createPath,
 	readFileSync,
 	pathExistsSync,
-	templateCompile
+	templateCompile,
+	handlebars: templater
 } = require('@markthree/node-shared')
 const {
 	noticeFail,
@@ -55,7 +55,7 @@ const runAutoCreate = async () => {
 runAutoCreate()
 
 // 创建模板编译助手(首字母大写)
-handlebars.registerHelper(
+templater.registerHelper(
 	'up',
 	v => v.charAt(0).toUpperCase() + v.slice(1)
 )
@@ -76,13 +76,6 @@ const genTypeToZh = t => {
 		component: '组件'
 	}
 	return types[t] || '文件'
-}
-
-// 基于模板生成文件
-const gen = async (src, dest, payload) => {
-	let template = readFileSync(src).toString()
-	template = templateCompile(template)(payload)
-	await createFile(dest, template)
 }
 
 // 创建组件
@@ -126,4 +119,11 @@ const isWillCreate = async (
 		return await useInquirerConfirm(msg, false)
 	}
 	return true
+}
+
+// 基于模板生成文件
+const gen = async (src, dest, payload) => {
+	let template = readFileSync(src).toString()
+	template = templateCompile(template)(payload)
+	await createFile(dest, template)
 }
