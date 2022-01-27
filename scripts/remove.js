@@ -90,7 +90,7 @@ const removePage = async (name, sort) => {
 	const shouldRemove = await isWillRemove(src, '页面')
 	if (shouldRemove) {
 		pagesJson.pages = pagesJson.pages.filter(page => {
-			return page.path !== `/pages/${sort}/${name}/${name}`
+			return page.path !== `pages/${sort}/${name}/${name}`
 		})
 		await remove(src)
 		await writeJson(p('../pages.json'), pagesJson, {

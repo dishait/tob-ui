@@ -104,7 +104,7 @@ const genPage = async (name, payload) => {
 	if (shouldCreate) {
 		const src = p('./template/page.vue')
 		pagesJson.pages.push({
-			path: `/pages/${sort}/${name}/${name}`
+			path: `pages/${sort}/${name}/${name}`
 		})
 		await gen(src, dest, payload)
 		await writeJson(p('../pages.json'), pagesJson, {
