@@ -1,6 +1,6 @@
 {
   "name": "tob-ui",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "更现代的 uniapp ui 😎",
   "main": "main.js",
   "scripts": {
